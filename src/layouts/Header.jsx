@@ -44,7 +44,7 @@ const styles = {
   },
   mainText: {
     fontSize: '1.5rem',
-    color: '#1a1a1a',
+    color: '#12283c',
     fontWeight: 'bold',
   },
   subText: {
