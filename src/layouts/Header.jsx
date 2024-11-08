@@ -22,7 +22,7 @@ const Header = () => {
 const styles = {
   headerContainer: {
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
-    padding: '10px',
+    padding: '5px',
     textAlign: 'center',
     backgroundColor: '#fff',
     borderRadius: '5px',
@@ -30,7 +30,7 @@ const styles = {
     position: 'fixed', // Fix it at the top
     top: 0, // Align it to the top of the viewport
     left: 0,
-    zIndex: 1000, // Ensures it stays above other content
+    zIndex: 10, // Ensures it stays above other content
   },
   logoContainer: {
     display: 'flex',
@@ -40,7 +40,7 @@ const styles = {
     padding: '0 10px',
   },
   logo: {
-    height: '100px', // Adjust logo size as necessary
+    height: '60px', // Adjust logo size as necessary
   },
   mainText: {
     fontSize: '1.5rem',
