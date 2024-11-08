@@ -57,11 +57,11 @@ const Footer = () => {
 };
 
 const FooterContainer = styled.footer`
-  width: 100%;
+  width: 150%;
   background-color: #12283c;
   color: #fff;
   padding: 20px 0;
-  position: fixed;
+  position: relative;
   bottom: 0;
   left: 0;
 `;

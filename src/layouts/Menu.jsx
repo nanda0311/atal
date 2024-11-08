@@ -75,7 +75,7 @@ const MenuContainer = styled.div`
   padding: 20px 0;
   position: fixed;
   width: 100%;
-  top: 155px; /* Adjust based on Navbar height */
+  top: 200px; /* Adjust based on Navbar height */
   left: 0;
   z-index: 999;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
