@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import nicImage from '../assets/logos/Aic.png';
+import Aic from '../assets/logos/Aic.png';
 import { FaInstagram, FaLinkedinIn, FaYoutube, FaTwitter, FaRegUserCircle, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
@@ -10,7 +10,7 @@ const Footer = () => {
       <Container>
         <Column>
           <h2>AIC-PECF</h2>
-          <img src={nicImage} alt="NIC" style={{ width: '100px', height: 'auto' }} />
+          <img src={Aic} alt="NIC" style={{ width: '100px', height: 'auto' }} />
         </Column>
         <Column>
           <h3>About Us</h3>
