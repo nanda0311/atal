@@ -1,5 +1,5 @@
 import React from 'react';
-import Aic from '../assets/logos/Aic.png';
+import Aiclogo from '../assets/logos/Aic.png';
 import Aim from '../assets/logos/Aim.png';
 import Ptu from '../assets/logos/ptu-logo.png';
 import Menu from './Menu';
@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <div style={styles.headerContainer}>
       <div style={styles.logoContainer}>
-        <img src={Aic} alt="AIC Logo" style={styles.logo} />
+        <img src={Aiclogo} alt="AIC Logo" style={styles.logo} />
         <img src={Aim} alt="AIM Logo" style={styles.logo} />
         <img src={Ptu} alt="PTU Logo" style={styles.logo} />
       </div>
