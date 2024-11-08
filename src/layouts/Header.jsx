@@ -40,7 +40,7 @@ const styles = {
     padding: '0 10px',
   },
   logo: {
-    height: '60px', // Adjust logo size as necessary
+    height: '100px', // Adjust logo size as necessary
   },
   mainText: {
     fontSize: '1.5rem',
