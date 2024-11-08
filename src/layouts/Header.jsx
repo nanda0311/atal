@@ -1,6 +1,6 @@
 import React from 'react';
-import Aiclogo from '../assets/logos/Aic.png';
-import Aim from '../assets/logos/Aim.png';
+import Aiclogo from '../assets/logos/AIC.png';
+import Aim from '../assets/logos/AIM.png';
 import Ptu from '../assets/logos/ptu-logo.png';
 import Menu from './Menu';
 
