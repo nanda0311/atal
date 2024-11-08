@@ -2,6 +2,7 @@ import React from 'react';
 import Aic from '../assets/logos/Aic.png';
 import Aim from '../assets/logos/Aim.png';
 import Ptu from '../assets/logos/ptu-logo.png';
+import Menu from './Menu';
 
 const Header = () => {
   return (
@@ -13,6 +14,7 @@ const Header = () => {
       </div>
       <h1 style={styles.mainText}>ATAL INCUBATION CENTER - PEC FOUNDATION</h1>
       <h2 style={styles.subText}>PUDUCHERRY TECHNOLOGY UNIVERSITY</h2>
+      <Menu/>
     </div>
   );
 };
@@ -51,5 +53,7 @@ const styles = {
     fontWeight: 'normal',
   },
 };
+
+
 
 export default Header;

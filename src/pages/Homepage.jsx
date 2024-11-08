@@ -1,16 +1,11 @@
-import React from 'react'
-import Header from '../layouts/Header'
-import Menu from '../layouts/Menu'
-import Footer from '../layouts/Footer'
+import React from 'react';
 
-export const Homepage = () => {
+const Home = () => {
   return (
-    <>
-       <Header/>
-       <Footer/>
-       
-    
-    
-    </>
-  )
-}
+    <div>
+      <h1>Welcome to the Home Page</h1>
+    </div>
+  );
+};
+
+export default Home;

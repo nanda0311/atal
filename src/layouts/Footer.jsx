@@ -93,9 +93,7 @@ const Column = styled.div`
   li {
     margin-bottom: 5px;
     cursor: pointer;
-    &:hover {
-      color: orange;
-    }
+    
   }
 
   p {
@@ -115,7 +113,7 @@ const SocialIcons = styled.div`
     color: #fff;
     font-size: 24px;
     &.instagram:hover {
-      color: #d62976;
+      color: #E1306C;
     }&.youtube:hover {
       color: #FF0000;
     }&.link:hover {

@@ -75,14 +75,14 @@ const MenuContainer = styled.div`
   padding: 20px 0;
   position: fixed;
   width: 100%;
-  top: 80px; /* Adjust based on Navbar height */
+  top: 200px; /* Adjust based on Navbar height */
   left: 0;
   z-index: 999;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Subtle shadow for depth */
 `;
 
 const ContentWrapper = styled.div`
-  max-width: 1000px;
+  max-width: 1200px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -113,8 +113,8 @@ const DropdownContent = styled.div`
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15); /* Updated shadow for dropdown */
+  min-width: 200px;
   z-index: 1;
   border-radius: 4px;
   overflow: hidden;
@@ -155,4 +155,3 @@ const DropdownItem = styled(Link)`
 `;
 
 export default Menu;
-
