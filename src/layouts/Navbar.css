@@ -1,0 +1,157 @@
+/* General Menu Styling */
+.items {
+    display: flex;
+    gap: 15px;
+    position: relative;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    justify-content: center;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 720px) {
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 10;
+        color: black;
+    }
+
+    .items {
+        display: none; /* Hide menu initially */
+        flex-direction: column;
+        gap: 0;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 80%;
+        background-color: white;
+    }
+
+    .items.show {
+        display: flex; /* Show menu when isMenuOpen is true */
+    }
+
+    .mainitem {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+/* Main Item and Dropdown Styling */
+.mainitem, .wrap {
+    position: relative;
+    z-index: 1;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid white;
+    font-size: medium;
+    text-decoration: none;
+    color: black;
+    padding: 3px;
+}
+
+.mainitem::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    bottom: -2px;
+    right: -2px;
+    padding: 2px;
+    background: linear-gradient(45deg, #04E762, #F5B700, #E95C3A, #DC0073, #008BF8);
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    width: 0;
+    height: 0;
+    filter: blur(10px);
+    z-index: -1;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.mainitem:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+.wrap {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Menu */
+.dropitem {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%; /* Aligns dropdown directly below the main item */
+    left: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+.dropitem a {
+    color: #333;
+    padding: 10px 20px;
+    display: block;
+    white-space: nowrap;
+}
+
+.wrap:hover .dropitem {
+    display: block;
+}
+
+.menuitem {
+    position: relative;
+    z-index: 1;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.menuitem::after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 0;
+    bottom: -2px;
+    right: -2px;
+    padding: 2px;
+    background: linear-gradient(45deg, #04E762, #F5B700, #E95C3A, #DC0073, #008BF8);
+    -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    width: 0;
+    height: 0;
+    filter: blur(10px);
+    z-index: -1;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.menuitem:hover::after {
+    width: 100%;
+    height: 100%;
+    color: blue;
+}
