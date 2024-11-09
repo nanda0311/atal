@@ -2,6 +2,7 @@
 import React from 'react';
 import Carousel from '../components/Homepage/CarouselSection';
 import iot from '../assets/Homepage/iot.svg'
+
 const Home = () => {
   return (
     <div style={{ textAlign: 'center', padding: '20px' }}>

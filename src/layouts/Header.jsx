@@ -14,6 +14,7 @@ const Header = () => {
       <h2 style={styles.subText}>PUDUCHERRY TECHNOLOGY UNIVERSITY</h2>
       {/*<Menu/>*/}
       <Navbar/>
+    
     </div>
   );
 };
