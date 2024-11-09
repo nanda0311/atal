@@ -1,6 +1,6 @@
 import React from 'react';
 import { ptuLogo, Aim, Aic } from '../assets/logos/logs';
-import Navbar from './navbar';
+import Navbar from './Nav';
 
 const Header = () => {
   return (
