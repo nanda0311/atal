@@ -1,15 +1,11 @@
 import React from 'react';
+import Coroseal from '../components/Homepage/CorouselSection';
+
 
 const Home = () => {
   return (
     <div>
-      <amith> welcome</amith>
-      <h1>Welcome to Home Page</h1> 
-      <h1>Welcome to Home Page</h1> 
-      <h1>Welcome to Home Page</h1> 
-      <h1>Welcome to Home Page</h1> 
-      <h1>Welcome to Home Page</h1> 
-      <h1>Welcome to Home Page</h1> 
+        <Coroseal/>
     </div>
   );
 };

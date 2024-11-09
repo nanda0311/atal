@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Aic from '../assets/logos/AIC.png';
-import { FaInstagram, FaLinkedinIn, FaYoutube, FaTwitter, FaRegUserCircle, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import { FaInstagram, FaLinkedinIn, FaYoutube, FaRegUserCircle, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
@@ -57,7 +57,7 @@ const Footer = () => {
 };
 
 const FooterContainer = styled.footer`
-  width: 150%;
+  width: 100%;
   background-color: #12283c;
   color: #fff;
   padding: 20px 0;
