@@ -6,13 +6,11 @@ const CarouselSection = () => {
     return (
         <CarouselContainer>
             <CarouselImage src={dummy1} alt="Carousel Background 1" />
-            <CarouselImage src={dummy2} alt="Carousel Background 1" />
-            <CarouselImage src={dummy3} alt="Carousel Background 1" />
             <Overlay />
 
             <TextContent>
                 <Title>
-                    Making <Highlight>தமிழ்நாடு</Highlight>
+                    Making 
                 </Title>
                 <Subtitle>A Global Startup Destination!</Subtitle>
             </TextContent>
@@ -46,7 +44,13 @@ const CarouselSection = () => {
 const CarouselContainer = styled.div`
     position: relative;
     height: 100vh;
+    width: 100vw; /* Ensure it takes the full viewport width */
     overflow: hidden;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 `;
 
 const CarouselImage = styled.img`
@@ -86,10 +90,6 @@ const Title = styled.h1`
     @media (min-width: 768px) {
         font-size: 4rem;
     }
-`;
-
-const Highlight = styled.span`
-    color: #fbbf24; /* Yellow color */
 `;
 
 const Subtitle = styled.h2`

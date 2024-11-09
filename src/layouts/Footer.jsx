@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Aic from '../assets/logos/AIC.png';
+import { Aic } from '../assets/logos/logs';
 import { FaInstagram, FaLinkedinIn, FaYoutube, FaRegUserCircle, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
