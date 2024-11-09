@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import { dummy1, dummy2, dummy3 } from '../../assets/Homepage/images';  // Import images from images.js
+import { dummy1, dummy2, dummy3 } from '../../assets/Homepage/images';  
 
 const CarouselSection = () => {
     return (
         <CarouselContainer>
             <CarouselImage src={dummy1} alt="Carousel Background 1" />
+            <CarouselImage src={dummy2} alt="Carousel Background 1" />
+            <CarouselImage src={dummy3} alt="Carousel Background 1" />
             <Overlay />
 
             <TextContent>
