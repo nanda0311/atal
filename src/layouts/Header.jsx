@@ -1,6 +1,7 @@
 import React from 'react';
 import Menu from './Menu';
 import {ptuLogo, Aim, Aic } from '../assets/logos/logs'
+import Navbar from './navbar';
 
 const Header = () => {
   return (
@@ -12,7 +13,8 @@ const Header = () => {
       </div>
       <h1 style={styles.mainText}>ATAL INCUBATION CENTER - PEC FOUNDATION</h1>
       <h2 style={styles.subText}>PUDUCHERRY TECHNOLOGY UNIVERSITY</h2>
-      <Menu/>
+      {/*<Menu/>*/}
+      <Navbar/>
     </div>
   );
 };

@@ -14,7 +14,7 @@ const CarouselSection = () => {
                 <Title>
                     Making 
                 </Title>
-                <Subtitle>A Global Startup Destination!</Subtitle>
+                <Subtitle>A Global Startup Destination</Subtitle>
             </TextContent>
 
             <FormSection>
