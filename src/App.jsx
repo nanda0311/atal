@@ -1,9 +1,13 @@
-import React from 'react';
+// src/App.js
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+import Home from './pages/Homepage';
+import React from 'react';
 import Menu from './layouts/Menu';
 import Header from './layouts/Header';
 import Footer from './layouts/Footer';
-import Home from './pages/Homepage';
+
+
 
 function App() {
   return (

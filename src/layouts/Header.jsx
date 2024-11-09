@@ -1,16 +1,14 @@
 import React from 'react';
-import Aiclogo from '../assets/logos/AIC.png';
-import Aim from '../assets/logos/AIM.png';
-import Ptu from '../assets/logos/ptu-logo.png';
 import Menu from './Menu';
+import {ptuLogo, Aim, Aic } from '../assets/logos/logs'
 
 const Header = () => {
   return (
     <div style={styles.headerContainer}>
       <div style={styles.logoContainer}>
-        <img src={Aiclogo} alt="AIC Logo" style={styles.logo} />
+        <img src={Aic} alt="AIC Logo" style={styles.logo} />
         <img src={Aim} alt="AIM Logo" style={styles.logo} />
-        <img src={Ptu} alt="PTU Logo" style={styles.logo} />
+        <img src={ptuLogo} alt="PTU Logo" style={styles.logo} />
       </div>
       <h1 style={styles.mainText}>ATAL INCUBATION CENTER - PEC FOUNDATION</h1>
       <h2 style={styles.subText}>PUDUCHERRY TECHNOLOGY UNIVERSITY</h2>
