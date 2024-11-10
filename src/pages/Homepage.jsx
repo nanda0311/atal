@@ -4,11 +4,13 @@ import { Player } from '@lottiefiles/react-lottie-player';
 import iot from '../assets/Homepage/iot.json';
 import uav from '../assets/Homepage/uav.json';
 import edm from '../assets/Homepage/edm.json';
-import styled from 'styled-components';
+import styled, {keyframes,css} from 'styled-components';
+import Header from '../layouts/Header';
 
 const Home = () => {
   return (
     <Container>
+      <Header />
       <Carousel />
       <AnimationsContainer>
         <Heading>Focus Area</Heading>
@@ -46,12 +48,44 @@ const Home = () => {
 
 export default Home;
 
+const blink = keyframes`
+  0%{
+    color: #333;
+    opacity: 0.5;
+  }
+  50%{
+    color: #EC8305;
+    opacity: 0.75;
+  }
+  100%{
+    color: #333;
+    opacity: 1;
+  }
+`; 
+
+const highlight = keyframes`
+  0%{
+    color: #6F61C0;
+    opacity: 1;
+  }
+  50%{
+    color: #A084E8;
+    opacity: 1;
+  }
+  100%{
+    color: #8BE8E5;
+    opacity: 1;
+  }
+
+`;
+
 // Styled Components
 
 const Container = styled.div`
   text-align: center;
   padding: 20px;
   background-color: #f5f5f5;
+  width: 1480px;
 `;
 
 const AnimationsContainer = styled.div`
@@ -78,6 +112,8 @@ const Heading = styled.h1`
   color: #333;
   text-align: center;
   font-weight: bold;
+  opacity: 0;
+  animation: ${blink} 2s infinite ease-in-out;
 `;
 
 const Box = styled.div`
@@ -93,6 +129,8 @@ const Box = styled.div`
     margin-bottom: 10px;
     font-size: 24px;
     color: #333;
+    opacity: 0;
+    animation: ${highlight} 3s infinite ease-in-out;
   }
 
   /* Lottie Animation Responsive */

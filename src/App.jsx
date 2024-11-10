@@ -11,7 +11,7 @@ import Footer from './layouts/Footer';
 function App() {
   return (
     <Router>
-      <Header />
+      {/*<Header />*/}
       {/* <Navbar />  */}
       <Routes>
         <Route path="/" element={<Home />} />
