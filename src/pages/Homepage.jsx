@@ -6,7 +6,7 @@ import iot from '../assets/Homepage/iot.json';
 import uav from '../assets/Homepage/uav.json';
 import edm from '../assets/Homepage/edm.json';
 import styled, {keyframes,css} from 'styled-components';
-
+import SocialMedia from '../components/Homepage/SocialMedia';
 import Partner from'../components/Homepage/Partner';
 import { About } from '../components/Homepage/About';
 
@@ -51,9 +51,9 @@ const Home = () => {
         </Box>
       </AnimationsContainer>
       
+     {/* SocialMedia */}
+     <SocialMedia/>
      
-
-
       {/* stats */}
       <Stats/>
 
