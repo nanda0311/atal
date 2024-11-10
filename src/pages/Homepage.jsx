@@ -6,6 +6,7 @@ import uav from '../assets/Homepage/uav.json';
 import edm from '../assets/Homepage/edm.json';
 import styled, {keyframes,css} from 'styled-components';
 import Header from '../layouts/Header';
+import Partner from'../components/Homepage/Partner';
 
 const Home = () => {
   return (
@@ -42,6 +43,7 @@ const Home = () => {
           />
         </Box>
       </AnimationsContainer>
+      <Partner/>
     </Container>
   );
 };
