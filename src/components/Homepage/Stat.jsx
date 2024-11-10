@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {Rocket} from '../../assets/Homepage/images';
 
 const stats = [
-    { number: "70+", description: "No. of Startups", icon: <Rocket/> },
+    { number: "70+", description: "No. of Startups", icon:"https://startupodisha.gov.in/wp-content/uploads/2021/07/Startup-1.gif"},
     { number: "70", description: "Nodal Agencies", icon: "https://placehold.co/50x50?text=Handshake&bg=white" },
     { number: "92", description: "Incubators Supported", icon: "https://placehold.co/50x50?text=Incubator&bg=white" },
     { number: "92", description: "(lakh sqft.) Incubation Space", icon: "https://placehold.co/50x50?text=Space&bg=white" },
