@@ -1,5 +1,4 @@
 import React from 'react';
-import Menu from './Menu';
 import {ptuLogo, Aim, Aic } from '../assets/logos/logs'
 import Navbar from './navbar';
 
