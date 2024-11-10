@@ -112,6 +112,7 @@ const fadeIn = keyframes`
 const CarouselContainer = styled.div`
     position: relative;
     height: 100vh;
+    width: 1480px;
     overflow: hidden;
     display: flex;
     justify-content: center;
