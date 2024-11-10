@@ -6,14 +6,19 @@ import iot from '../assets/Homepage/iot.json';
 import uav from '../assets/Homepage/uav.json';
 import edm from '../assets/Homepage/edm.json';
 import styled, {keyframes,css} from 'styled-components';
-import Header from '../layouts/Header';
+
 import Partner from'../components/Homepage/Partner';
+import { About } from '../components/Homepage/About';
 
 const Home = () => {
   return (
     <Container>
-      <Header />
+      
       <Carousel />
+       {/*   about */}
+       <About/>
+
+
       {/* foucs Area */}
       <AnimationsContainer>
         <Heading>Focus Area</Heading>
@@ -45,6 +50,8 @@ const Home = () => {
           />
         </Box>
       </AnimationsContainer>
+      
+     
 
 
       {/* stats */}

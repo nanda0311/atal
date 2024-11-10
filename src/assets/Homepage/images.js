@@ -6,6 +6,6 @@ import dummy5 from './dummy5.jpg';
 import dummy6 from './dummy6.jpg';
 import dummy7 from './dummy7.jpg';
 import Rocket from './rocket.gif';
+import About  from './about.png';
 
-
-export { dummy1, dummy2, dummy3,dummy4,dummy5,dummy6,dummy7,Rocket };
+export { dummy1, dummy2, dummy3,dummy4,dummy5,dummy6,dummy7,Rocket,About };
