@@ -1,4 +1,3 @@
-// src/pages/About.js
 const About = () => {
     return (
       <div style={{ paddingTop: '60px', textAlign: 'center' }}>

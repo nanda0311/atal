@@ -33,7 +33,7 @@ const Header = () => {
       </div>
       <h1 style={styles.mainText}>ATAL INCUBATION CENTER - PEC FOUNDATION</h1>
       <h2 style={styles.subText}>PUDUCHERRY TECHNOLOGY UNIVERSITY</h2>
-
+      
       <div className="menu">
         <button className="hamburger" onClick={toggleMenu}>☰</button>
         <nav className={`items ${isMenuOpen ? "show" : ""}`}>

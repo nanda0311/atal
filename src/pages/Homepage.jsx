@@ -1,5 +1,6 @@
 import React from 'react';
 import Carousel from '../components/Homepage/CarouselSection';
+import Stats from '../components/Homepage/Stat';
 import { Player } from '@lottiefiles/react-lottie-player';
 import iot from '../assets/Homepage/iot.json';
 import uav from '../assets/Homepage/uav.json';
@@ -10,6 +11,7 @@ const Home = () => {
   return (
     <Container>
       <Carousel />
+      {/* foucs Area */}
       <AnimationsContainer>
         <Heading>Focus Area</Heading>
         <Box>
@@ -40,6 +42,10 @@ const Home = () => {
           />
         </Box>
       </AnimationsContainer>
+
+      {/* stats */}
+      <Stats/>
+
     </Container>
   );
 };
