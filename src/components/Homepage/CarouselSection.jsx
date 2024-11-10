@@ -8,7 +8,7 @@ const CarouselSection = () => {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setIndex((prevIndex) => (prevIndex+2) % images.length);
+            setIndex((prevIndex) => (prevIndex+1) % images.length);
         }, 3000); // Change image every 3 seconds
 
         return () => clearInterval(interval);
@@ -112,7 +112,6 @@ const fadeIn = keyframes`
 const CarouselContainer = styled.div`
     position: relative;
     height: 100vh;
-    width: 100vw;
     overflow: hidden;
     display: flex;
     justify-content: center;
