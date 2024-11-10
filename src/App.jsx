@@ -5,6 +5,8 @@ import Home from './pages/Homepage';
 import React from 'react';
 import Header from './layouts/Header';
 import Footer from './layouts/Footer';
+import Contact from './pages/contact.jsx';
+
 
 
 
@@ -16,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </Router>
