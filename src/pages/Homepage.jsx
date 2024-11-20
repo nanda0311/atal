@@ -10,6 +10,7 @@ import SocialMedia from '../components/Homepage/SocialMedia';
 import Partner from'../components/Homepage/Partner';
 import { About } from '../components/Homepage/About';
 
+
 const Home = () => {
   return (
     <Container>

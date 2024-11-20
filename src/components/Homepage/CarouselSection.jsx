@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import styled, { keyframes, css } from 'styled-components';
-import { dummy1, dummy2, dummy3, dummy4, dummy5, dummy6, dummy7 } from '../../assets/Homepage/images';
+import { dummy1, dummy2, dummy3, dummy4, dummy5, dummy6, dummy7} from '../../assets/Homepage/images';
 
 const CarouselSection = () => {
     const images = [dummy1, dummy2, dummy3, dummy4, dummy5, dummy6, dummy7 ];
@@ -178,7 +178,8 @@ const FormSection = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    height :10px;
+    width: 200%;
     padding-top: 30px;
 `;
 
