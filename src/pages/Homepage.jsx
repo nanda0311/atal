@@ -47,7 +47,7 @@ const Home = () => {
             autoplay
             loop
             src={iot}
-            style={{ height: '300px', width: '300px' }}
+            style={{ height: '300px', width:  '300px' }}
           />
         </Box>
       </AnimationsContainer>
