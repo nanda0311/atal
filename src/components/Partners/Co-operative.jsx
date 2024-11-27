@@ -1,37 +1,38 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const academicPartners = [
-  { name: 'Facebook Research', logo: 'https://via.placeholder.com/150?text=FB' },
-  { name: 'Google AI', logo: 'https://via.placeholder.com/150?text=Google' },
-  { name: 'Microsoft Labs', logo: 'https://via.placeholder.com/150?text=MS' },
-  { name: 'OpenAI', logo: 'https://via.placeholder.com/150?text=OpenAI' },
-];
+const Cooperative = () => {
+  const cooperativePartners = [
+    { name: 'Facebook Research', logo: 'https://via.placeholder.com/150?text=FB' },
+    { name: 'Google AI', logo: 'https://via.placeholder.com/150?text=Google' },
+    { name: 'Microsoft Labs', logo: 'https://via.placeholder.com/150?text=MS' },
+    { name: 'OpenAI', logo: 'https://via.placeholder.com/150?text=OpenAI' },
+  ];
 
-export const Academic = () => {
   return (
-    <AcademicContainer>
+    <CooperativeContainer>
       <h2>Our Co-Operative Partners</h2>
-      <LogosContainer>
-        {academicPartners.map((partner, index) => (
-          <LogoCard key={index}>
+      <PartnersContainer>
+        {cooperativePartners.map((partner, index) => (
+          <PartnerCard key={index}>
             <PartnerLogo src={partner.logo} alt={`${partner.name} logo`} />
-            <LogoInfo>
-              <h3>{partner.name}</h3>
-            </LogoInfo>
-          </LogoCard>
+            <PartnerName>{partner.name}</PartnerName>
+          </PartnerCard>
         ))}
-      </LogosContainer>
-    </AcademicContainer>
+      </PartnersContainer>
+    </CooperativeContainer>
   );
 };
 
-const AcademicContainer = styled.div`
+export default Cooperative
+
+const CooperativeContainer = styled.div`
   text-align: center;
   padding: 20px;
 
   h2 {
     font-size: 1.8rem;
+    color: #1d4ed8; /* Blue color */
   }
 
   @media (max-width: 768px) {
@@ -49,7 +50,7 @@ const AcademicContainer = styled.div`
   }
 `;
 
-const LogosContainer = styled.div`
+const PartnersContainer = styled.div`
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -60,8 +61,10 @@ const LogosContainer = styled.div`
   }
 `;
 
-const LogoCard = styled.div`
-  position: relative;
+const PartnerCard = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 150px;
   height: 150px;
   border-radius: 10px;
@@ -72,7 +75,7 @@ const LogoCard = styled.div`
 
   &:hover {
     transform: scale(1.05);
-    box-shadow:  12px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 12px 16px rgba(0, 0, 0, 0.2);
   }
 
   @media (max-width: 480px) {
@@ -87,30 +90,12 @@ const PartnerLogo = styled.img`
   object-fit: cover;
 `;
 
-const LogoInfo = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.7);
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.3s;
+const PartnerName = styled.h3`
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #1d4ed8;
 
-  ${LogoCard}:hover & {
-    opacity: 1;
-  }
-
-  h3 {
-    font-size: 1.2rem;
-
-    @media (max-width: 480px) {
-      font-size: 1rem;
-    }
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
   }
 `;

@@ -8,7 +8,7 @@ const academicPartners = [
   { name: 'OpenAI', logo: 'https://via.placeholder.com/150?text=OpenAI' },
 ];
 
-export const Academic = () => {
+ const Academic = () => {
   return (
     <AcademicContainer>
       <h2>Our Academic Partners</h2>
@@ -25,6 +25,7 @@ export const Academic = () => {
     </AcademicContainer>
   );
 };
+export default Academic;
 
 const AcademicContainer = styled.div`
   text-align: center;
