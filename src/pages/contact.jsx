@@ -28,20 +28,12 @@ const ContactUs = () => {
             <h3>Support</h3>
             <p>Email: info@aicpecf.org</p>
             <p>Phone: +91 123456789</p>
-            <QuickLinks>
-              <a href="https://www.instagram.com/aic_pecf" target="_blank" rel="noopener noreferrer">
-                <FaInstagram /> 
-              </a>
-              <a href="https://www.linkedin.com/company/aicpecf/" target="_blank" rel="noopener noreferrer">
-                <FaLinkedinIn /> 
-              </a>
-              <a href="https://youtube.com/@atalincubationcentre-pecfo946" target="_blank" rel="noopener noreferrer">
-                <FaYoutube />
-              </a>
-              <a href="https://twitter.com/aicpecftweet" target="_blank" rel="noopener noreferrer">
-                <FaXTwitter /> 
-              </a>
-            </QuickLinks>
+            <SocialIcons>
+            <a className='instagram' href="https://www.instagram.com/aic_pecf" target="_blank" rel="noopener noreferrer"><FaInstagram /></a>
+            <a className='x'href="https://twitter.com/aicpecftweet" target="_blank" rel="noopener noreferrer"><FaXTwitter /></a>
+            <a className='link'href="https://www.linkedin.com/company/aicpecf/" target="_blank" rel="noopener noreferrer"><FaLinkedinIn /></a>
+            <a className='youtube'href="https://youtube.com/@atalincubationcentre-pecfo946" target="_blank" rel="noopener noreferrer"><FaYoutube /></a>
+          </SocialIcons>
           </TileContent>
         </Tile>
       </TileContainer>
@@ -119,18 +111,22 @@ const TileContent = styled.div`
   }
 `;
 
-const QuickLinks = styled.div`
+const SocialIcons = styled.div`
   display: flex;
   justify-content: center;
   gap: 10px;
 
   a {
-    color: #12283c;
-    font-size: 1.5rem;
-    transition: color 0.3s;
-
-    &:hover {
-      color: #1e90ff;
+    color: black;
+    font-size: 24px;
+    &.instagram:hover {
+      color: #E1306C;
+    }&.youtube:hover {
+      color: #FF0000;
+    }&.link:hover {
+      color:#0077B5;
+    }&.x:hover {
+      color: black;
     }
   }
 `;

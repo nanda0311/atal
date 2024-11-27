@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-
-
+import Rocket from '../../assets/Homepage/rocket.gif'; 
+import Rockets from '../../assets/Homepage/rocketg.gif'; 
 const stats = [
-    { number: "67", description: "No. of Startups", icon:"https://startupodisha.gov.in/wp-content/uploads/2021/07/Startup-1.gif"},
-    { number: "12", description: "Stratup Gradated", icon: "https://placehold.co/50x50?text=Handshake&bg=white" },
-    { number: "250+", description: "Employment Generated", icon: "https://placehold.co/50x50?text=Incubator&bg=white" },
+    { number: "67", description: "No. of Startups", icon: Rocket},
+    { number: "12", description: "Stratup Gradated", icon: Rockets },
+    { number: "250+", description: "Employment Generated", icon: "https://p lacehold.co/50x50?text=Incubator&bg=white" },
     { number: "92", description: "Corps Fund", icon: "https://placehold.co/50x50?text=Space&bg=white" },
     { number: "92", description: "CSR Secured", icon: "https://placehold.co/50x50?text=Funding&bg=white" },
 ];

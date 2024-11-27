@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import styled, { css, keyframes } from 'styled-components';
-import { Link } from 'react-router-dom'; // For routing
-import AboutImage from '../../assets/Homepage/about.png'; // Adjust path to your image
+import { Link } from 'react-router-dom';
+import AboutImage from '../../assets/Homepage/about.png';
 
 // Keyframe animations
 const fadeIn = keyframes`
@@ -45,7 +45,7 @@ export const About = () => {
   }, [isVisible]);
 
   return (
-    <HeroSection ref={heroRef} isVisible={isVisible}>
+    <HeroSection ref={heroRef} $isVisible={isVisible}>
       <HeroContent>
         <HeroImage src={AboutImage} alt="NIC" />
         <HeroText>
@@ -53,7 +53,7 @@ export const About = () => {
           <p>
             Atal Incubation Centre - Pondicherry Engineering College Foundation (AIC-PECF) is fully supported and funded by Atal Innovation Mission (AIM), Niti Aayog, Government of India. AIC-PECF was initiated to provide a platform to assist and enable young entrepreneurs to initiate startups for the commercial exploitation of technologies developed by them.
           </p>
-          <HeroButton to="/about">Learn More</HeroButton>
+          <HeroButton to="/about" $isVisible={isVisible}>Learn More</HeroButton>
         </HeroText>
       </HeroContent>
     </HeroSection>
@@ -68,8 +68,8 @@ const HeroSection = styled.section`
   justify-content: center;
   align-items: center;
   color: #12283c;
-  opacity: ${({ isVisible }) => (isVisible ? '1' : '0')};
-  transform: ${({ isVisible }) => (isVisible ? 'scale(1)' : 'scale(0.5)')};
+  opacity: ${({ $isVisible }) => ($isVisible ? '1' : '0')};
+  transform: ${({ $isVisible }) => ($isVisible ? 'scale(1)' : 'scale(0.5)')};
   transition: opacity 1s ease, transform 1s ease;
 `;
 
@@ -104,9 +104,9 @@ const HeroButton = styled(Link)`
   border-radius: 5px;
   text-decoration: none;
   transition: background-color 0.3s;
-  opacity: ${({ isVisible }) => (isVisible ? '1' : '0')};
-  animation: ${({ isVisible }) =>
-    isVisible ? css`${fadeIn} 1s ease forwards, ${scaleUp} 1s ease forwards` : 'none'};
+  opacity: ${({ $isVisible }) => ($isVisible ? '1' : '0')};
+  animation: ${({ $isVisible }) =>
+    $isVisible ? css`${fadeIn} 1s ease forwards, ${scaleUp} 1s ease forwards` : 'none'};
   animation-delay: 1.5s;
 
   &:hover {
