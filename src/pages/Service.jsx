@@ -134,9 +134,8 @@ Machine Code Type: GCODE
 ];
 
 const Container = styled.div`
-  padding: 20px;
-  text-align: center;
-  background-color: #f9f9f9;
+background-color: #f0f9ff;
+  padding: 2rem;
 `;
 
 const Title = styled.h1`
@@ -145,36 +144,40 @@ const Title = styled.h1`
 `;
 
 const Grid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 20px;
+   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
 `;
 
 const Card = styled.div`
-  background: white;
-  border: 1px solid #ddd;
+ background-color: white;
   border-radius: 8px;
-  padding: 20px;
-  text-align: left;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 1.5rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
 `;
 
 const Logo = styled.img`
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-  margin-bottom: 15px;
+ width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 1rem;
 `;
 
 const CardTitle = styled.h2`
-  color: #333;
-  margin-bottom: 10px;
+   font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 `;
 
 const Details = styled.p`
-  color: #555;
-  white-space: pre-line;
+   color: #6b7280;
 `;
 
 const Service = () => {
