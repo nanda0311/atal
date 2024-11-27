@@ -7,6 +7,7 @@ import Header from './layouts/Header';
 import Footer from './layouts/Footer';
 import Contact from './pages/contact.jsx';
 import Partners from './pages/Partners.jsx';
+import Service from './pages/Service.jsx';
 
 
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/partners" element={<Partners />} />
+        <Route path="/studentProject" element={<Service/>} />
       </Routes>
       <Footer />
     </Router>
