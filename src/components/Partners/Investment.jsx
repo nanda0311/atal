@@ -11,7 +11,7 @@ const academicPartners = [
  const Academic = () => {
   return (
     <AcademicContainer>
-      <h2>Our Academic Partners</h2>
+      <h2>Our Investment Partners</h2>
       <LogosContainer>
         {academicPartners.map((partner, index) => (
           <LogoCard key={index}>
@@ -26,7 +26,6 @@ const academicPartners = [
   );
 };
 export default Academic;
-
 const AcademicContainer = styled.div`
   text-align: center;
   padding: 20px;
