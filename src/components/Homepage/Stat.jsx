@@ -1,16 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import {Rocket} from '../../assets/Homepage/images';
+
 
 const stats = [
-    { number: "70+", description: "No. of Startups", icon:"https://startupodisha.gov.in/wp-content/uploads/2021/07/Startup-1.gif"},
-    { number: "70", description: "Nodal Agencies", icon: "https://placehold.co/50x50?text=Handshake&bg=white" },
-    { number: "92", description: "Incubators Supported", icon: "https://placehold.co/50x50?text=Incubator&bg=white" },
-    { number: "92", description: "(lakh sqft.) Incubation Space", icon: "https://placehold.co/50x50?text=Space&bg=white" },
-    { number: "92", description: "Venture Funded Startups", icon: "https://placehold.co/50x50?text=Funding&bg=white" },
-    { number: "70", description: "Purchase Order Awarded", icon: "https://placehold.co/50x50?text=Award&bg=white" },
-    { number: "70", description: "Seed Funded Startups", icon: "https://placehold.co/50x50?text=Seed&bg=white" },
-   
+    { number: "67", description: "No. of Startups", icon:"https://startupodisha.gov.in/wp-content/uploads/2021/07/Startup-1.gif"},
+    { number: "12", description: "Stratup Gradated", icon: "https://placehold.co/50x50?text=Handshake&bg=white" },
+    { number: "250+", description: "Employment Generated", icon: "https://placehold.co/50x50?text=Incubator&bg=white" },
+    { number: "92", description: "Corps Fund", icon: "https://placehold.co/50x50?text=Space&bg=white" },
+    { number: "92", description: "CSR Secured", icon: "https://placehold.co/50x50?text=Funding&bg=white" },
 ];
 
 const Wrapper = styled.div`

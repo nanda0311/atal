@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom"; 
+import { Link, useNavigate } from "react-router-dom";
 import { ptuLogo, Aim, Aic } from '../assets/logos/logs';
 import "./Navbar.css";
 
@@ -9,7 +9,7 @@ const Header = () => {
   const navigate = useNavigate();
 
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen); 
+    setIsMenuOpen(!isMenuOpen);
   };
 
   const toggleDropdown = (index) => {
@@ -22,6 +22,9 @@ const Header = () => {
 
   const goToContact = () => {
     navigate("/contact");
+  };
+  const goToPartners = () => {
+    navigate("/partners");
   };
 
   return (
@@ -37,60 +40,61 @@ const Header = () => {
       <div className="menu">
         <button className="hamburger" onClick={toggleMenu}>☰</button>
         <nav className={`items ${isMenuOpen ? "show" : ""}`}>
-          <button onClick={goToHome} className="mainitem">Home</button> 
+          <button onClick={goToHome} className="mainitem">Home</button>
           <div className="wrap">
             <button className="mainitem" onClick={() => toggleDropdown(0)}>Portfolio</button>
             <div className={`dropitem ${openDropdown === 0 ? "show-dropdown" : ""}`}>
-              <Link to="/startupDetail" className="menuitem">Startup Details</Link> 
-              <Link to="/studentProject" className="menuitem">Students Project</Link> 
+              <Link to="/startupDetail" className="menuitem">Startup Details</Link>
+              <Link to="/studentProject" className="menuitem">Students Project</Link>
             </div>
           </div>
           <div className="wrap">
             <button className="mainitem" onClick={() => toggleDropdown(2)}>Programs</button>
             <div className={`dropitem ${openDropdown === 2 ? "show-dropdown" : ""}`}>
-              <Link to="/" className="menuitem">Pre-Incubate</Link> 
-              <Link to="/" className="menuitem">Incubate</Link> 
-              <Link to="/" className="menuitem">Incubation</Link> 
-              <Link to="/" className="menuitem">IP Facilities</Link> 
+              <Link to="/preIncubate" className="menuitem">Pre-Incubate</Link>
+              <Link to="/incubate" className="menuitem">Incubate</Link>
+              <Link to="/incubation" className="menuitem">Incubation</Link>
+              <Link to="/ipFacilities" className="menuitem">IP Facilities</Link>
             </div>
           </div>
           <div className="wrap">
-            <button className="mainitem" onClick={() => toggleDropdown(3)}>Partners</button>
+          <button className="mainitem" onClick={() => { goToPartners(); toggleDropdown(3); }}>Partners</button>
+
             <div className={`dropitem ${openDropdown === 3 ? "show-dropdown" : ""}`}>
-              <Link to="/" className="menuitem">Academic Partners</Link> 
-              <Link to="/" className="menuitem">Co-operative Partners</Link> 
-              <Link to="/" className="menuitem">IP Supporters</Link> 
-              <Link to="/" className="menuitem">Networking Partners</Link> 
-              <Link to="/" className="menuitem">Investment Partners</Link> 
+              <Link to="/academicPartners" className="menuitem">Academic Partners</Link>
+              <Link to="/cooperativePartners" className="menuitem">Co-operative Partners</Link>
+              <Link to="/ipSupporters" className="menuitem">IP Supporters</Link>
+              <Link to="/networkingPartners" className="menuitem">Networking Partners</Link>
+              <Link to="/investmentPartners" className="menuitem">Investment Partners</Link>
             </div>
           </div>
           <div className="wrap">
             <button className="mainitem" onClick={() => toggleDropdown(4)}>Events</button>
             <div className={`dropitem ${openDropdown === 4 ? "show-dropdown" : ""}`}>
-              <Link to="/" className="menuitem">Upcoming Events</Link> 
-              <Link to="/" className="menuitem">Outreach Events</Link> 
-              <Link to="/" className="menuitem">Event Gallery</Link> 
-              <Link to="/" className="menuitem">Register</Link> 
-              <Link to="/" className="menuitem">Summary</Link> 
+              <Link to="/upcomingEvents" className="menuitem">Upcoming Events</Link>
+              <Link to="/outreachEvents" className="menuitem">Outreach Events</Link>
+              <Link to="/eventGallery" className="menuitem">Event Gallery</Link>
+              <Link to="/registerEvent" className="menuitem">Register</Link>
+              <Link to="/eventSummary" className="menuitem">Summary</Link>
             </div>
           </div>
           <div className="wrap">
             <button className="mainitem" onClick={() => toggleDropdown(5)}>Funding</button>
             <div className={`dropitem ${openDropdown === 5 ? "show-dropdown" : ""}`}>
-              <Link to="/" className="menuitem">SISFS</Link> 
-              <Link to="/" className="menuitem">PROPLEX</Link> 
-              <Link to="/" className="menuitem">Aim Seed Investments</Link> 
-              <Link to="/" className="menuitem">External Funding Support</Link> 
+              <Link to="/sisfs" className="menuitem">SISFS</Link>
+              <Link to="/proplex" className="menuitem">PROPLEX</Link>
+              <Link to="/aimSeedInvestments" className="menuitem">Aim Seed Investments</Link>
+              <Link to="/externalFunding" className="menuitem">External Funding Support</Link>
             </div>
           </div>
           <div className="wrap">
             <button className="mainitem" onClick={() => toggleDropdown(6)}>Tenders</button>
             <div className={`dropitem ${openDropdown === 6 ? "show-dropdown" : ""}`}>
-              <Link to="/" className="menuitem">Ongoing</Link> 
-              <Link to="/" className="menuitem">Closed</Link> 
+              <Link to="/ongoingTenders" className="menuitem">Ongoing</Link>
+              <Link to="/closedTenders" className="menuitem">Closed</Link>
             </div>
           </div>
-          <button onClick={goToContact} className="mainitem">Contact Us</button> 
+          <button onClick={goToContact} className="mainitem">Contact Us</button>
         </nav>
       </div>
     </div>
@@ -99,7 +103,6 @@ const Header = () => {
 
 const styles = {
   headerContainer: {
-    
     padding: '5px',
     textAlign: 'center',
     backgroundColor: '#fff',
@@ -132,46 +135,6 @@ const styles = {
     color: '#1a1a1a',
     fontWeight: 'normal',
     marginBottom: '2px',
-  },
-  // Media queries for responsiveness
-  '@media (max-width: 1024px)': {
-    mainText: {
-      fontSize: '1.3rem',
-    },
-    subText: {
-      fontSize: '1rem',
-    },
-    logoContainer: {
-      justifyContent: 'center',
-    },
-    logo: {
-      height: '70px',
-    },
-  },
-  '@media (max-width: 768px)': {
-    headerContainer: {
-      padding: '8px',
-    },
-    mainText: {
-      fontSize: '1.2rem',
-    },
-    subText: {
-      fontSize: '0.9rem',
-    },
-    logo: {
-      height: '60px',
-    },
-  },
-  '@media (max-width: 480px)': {
-    logo: {
-      height: '50px',
-    },
-    mainText: {
-      fontSize: '1rem',
-    },
-    subText: {
-      fontSize: '0.8rem',
-    },
   },
 };
 
