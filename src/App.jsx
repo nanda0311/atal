@@ -7,7 +7,7 @@ import Contact from './pages/contact.jsx';
 import Partners from './pages/Partners.jsx';
 import Portfolio from './pages/Portfolio.jsx';
 import Service from './pages/Service.jsx';
-
+import Events from './pages/Events.jsx';
 // Layouts
 import Header from './layouts/Header';
 import Footer from './layouts/Footer';
@@ -29,6 +29,7 @@ function App() {
         <Route path="/partners" element={<Partners />} />
         <Route path="/studentProject" element={<Service />} />
         <Route path="/startupDetail" element={<Portfolio />} />
+        <Route path="/events" element={<Events/>} />
         <Route path="*" element={<div>404 - Page Not Found</div>} />
         <Route path="/academicPartners" element={<Academic />} />
         <Route path="/cooperativePartners" element={<Cooperative />} />

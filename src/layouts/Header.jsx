@@ -26,6 +26,9 @@ const Header = () => {
   const goToPartners = () => {
     navigate("/partners");
   };
+  const goToEvents = () => {
+    navigate("/events");
+  };
 
   return (
     <div style={styles.headerContainer}>
@@ -69,7 +72,7 @@ const Header = () => {
             </div>
           </div>
           <div className="wrap">
-            <button className="mainitem" onClick={() => toggleDropdown(4)}>Events</button>
+            <button className="mainitem" onClick={() => {goToEvents();toggleDropdown(4);}}>Events</button>
             <div className={`dropitem ${openDropdown === 4 ? "show-dropdown" : ""}`}>
               <Link to="/upcomingEvents" className="menuitem">Upcoming Events</Link>
               <Link to="/outreachEvents" className="menuitem">Outreach Events</Link>
