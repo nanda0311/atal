@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import React from 'react';
 
@@ -10,6 +11,21 @@ import Portfolio from './pages/Portfolio.jsx';
 // Layouts
 import Header from './layouts/Header';
 import Footer from './layouts/Footer';
+=======
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+import Home from './pages/Homepage';
+import Header from './layouts/Header';
+import Footer from './layouts/Footer';
+import Contact from './pages/contact.jsx';
+import Partners from './pages/Partners.jsx';
+import Academic from './components/Partners/Academic.jsx';
+import Cooperative from './components/Partners/Co-operative.jsx';
+import Investment from './components/Partners/Investment.jsx';
+import IP from './components/Partners/IP.jsx';
+import Network from './components/Partners/Network.jsx';
+>>>>>>> 56aa3028985fcb892e2e9fcc27a1df800312ee76
 
 function App() {
   return (
@@ -19,8 +35,16 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/partners" element={<Partners />} />
+<<<<<<< HEAD
         <Route path="/startupDetail" element={<Portfolio />} />
         <Route path="*" element={<div>404 - Page Not Found</div>} />
+=======
+        <Route path="/academicPartners" element={<Academic />} />
+        <Route path="/cooperativePartners" element={<Cooperative />} />
+        <Route path="/investmentPartners" element={<Investment />} />
+        <Route path="/ipSupporters" element={<IP />} />
+        <Route path="/networkingPartners" element={<Network />} />
+>>>>>>> 56aa3028985fcb892e2e9fcc27a1df800312ee76
       </Routes>
       <Footer />
     </Router>
