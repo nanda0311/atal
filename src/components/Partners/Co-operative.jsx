@@ -11,7 +11,7 @@ const academicPartners = [
 export const Academic = () => {
   return (
     <AcademicContainer>
-      <h2>Our Academic Partners</h2>
+      <h2>Our Co-Operative Partners</h2>
       <LogosContainer>
         {academicPartners.map((partner, index) => (
           <LogoCard key={index}>

@@ -5,6 +5,7 @@ const Partners = () => {
   return (
     <div>
       <Academic />
+      
     </div>
   )
 }
