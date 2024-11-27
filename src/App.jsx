@@ -13,7 +13,7 @@ import Partners from './pages/Partners.jsx';
 function App() {
   return (
     <Router>
-      {/*<Header />*/}
+      <Header />
       {/* <Navbar />  */}
       <Routes>
         <Route path="/" element={<Home />} />
