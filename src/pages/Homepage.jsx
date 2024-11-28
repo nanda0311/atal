@@ -20,7 +20,7 @@ const Home = () => {
        <About/>
 
 
-      {/* foucs Area */}
+      {/* foucsArea */}
       <AnimationsContainer>
         <Heading>Focus Area</Heading>
         <Box>
