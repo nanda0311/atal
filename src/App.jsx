@@ -9,8 +9,7 @@ import Portfolio from './pages/Portfolio.jsx';
 import Service from './pages/Service.jsx';
 import Events from './pages/Events.jsx';
 import Tenders from './pages/Tenders'; 
-import TendersAdmin from './Admin/TendersAdmin'; // Import Tenders Admin Page
-
+import TendersAdmin from './Admin/TendersAdmin'; 
 // Layouts
 import Header from './layouts/Header';
 import Footer from './layouts/Footer';

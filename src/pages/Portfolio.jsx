@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PortfolioFilters from '../components/Portfolio/portfolioFilters';
-import PortfolioCard from '../components/Portfolio/PortfolioCard';
+import PortfolioCard from '../components/Portfolio/portfolioCard';
 
 const portfolioData = [
   { id: 1, category: 'Ongoing', title: 'Startup A', description: 'Innovative AI solutions.' },
