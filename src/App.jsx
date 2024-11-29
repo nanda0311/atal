@@ -8,8 +8,8 @@ import Partners from './pages/Partners.jsx';
 import Portfolio from './pages/Portfolio.jsx';
 import Service from './pages/Service.jsx';
 import Events from './pages/Events.jsx';
-import Tenders from './pages/tenders'; // Import Tenders Page
-import TendersAdmin from './admin/tendersAdmin'; // Import Tenders Admin Page
+import Tenders from './pages/Tenders'; 
+import TendersAdmin from './admin/TendersAdmin'; // Import Tenders Admin Page
 
 // Layouts
 import Header from './layouts/Header';
