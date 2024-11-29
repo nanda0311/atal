@@ -3,13 +3,13 @@ import PortfolioFilters from '../components/Portfolio/portfolioFilters';
 import PortfolioCard from '../components/Portfolio/PortfolioCard';
 
 const portfolioData = [
-  { id: 1, category: 'Technology', title: 'Startup A', description: 'Innovative AI solutions.' },
-  { id: 2, category: 'Healthcare', title: 'Startup B', description: 'Revolutionizing health tech.' },
-  { id: 3, category: 'Education', title: 'Startup C', description: 'Online learning platform.' },
+  { id: 1, category: 'Ongoing', title: 'Startup A', description: 'Innovative AI solutions.' },
+  { id: 2, category: 'Graducated', title: 'Startup B', description: 'Revolutionizing health tech.' },
+  { id: 3, category: 'sisfs', title: 'Startup C', description: 'Online learning platform.' },
   { id: 4, category: 'Technology', title: 'Startup D', description: 'Blockchain-based solutions.' },
 ];
 
-const categories = ['All', 'Technology', 'Healthcare', 'Education'];
+const categories = ['All', 'Ongoing', 'Graducated', 'SISFS'];
 
 const Portfolio = () => {
   const [filteredCategory, setFilteredCategory] = useState('All');
