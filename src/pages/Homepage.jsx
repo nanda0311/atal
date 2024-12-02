@@ -9,12 +9,13 @@ import styled, {keyframes,css} from 'styled-components';
 import SocialMedia from '../components/Homepage/SocialMedia';
 import Partner from'../components/Homepage/Partner';
 import { About } from '../components/Homepage/About';
+import Header from '../layouts/Header.jsx'
 
 
 const Home = () => {
   return (
     <Container>
-      
+      {/*<Header/>*/}
       <Carousel />
        {/*   about */}
        <About/>
@@ -104,7 +105,11 @@ const Container = styled.div`
   text-align: center;
   padding: 20px;
   background-color: #f5f5f5;
-  width: 1480px;
+  width: 100%;
+  
+  @media (max-width:){
+    width: 100%;
+  }
 `;
 
 const AnimationsContainer = styled.div`
@@ -131,8 +136,8 @@ const Heading = styled.h1`
   color: #333;
   text-align: center;
   font-weight: bold;
-  opacity: 0;
-  animation: ${blink} 2s infinite ease-in-out;
+  opacity: 1;
+  /*animation: ${blink} 2s infinite ease-in-out;*/
 `;
 
 const Box = styled.div`
@@ -148,8 +153,8 @@ const Box = styled.div`
     margin-bottom: 10px;
     font-size: 24px;
     color: #333;
-    opacity: 0;
-    animation: ${highlight} 3s infinite ease-in-out;
+    opacity: 1;
+    /*animation: ${highlight} 3s infinite ease-in-out;*/
   }
 
   /* Lottie Animation Responsive */
