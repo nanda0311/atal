@@ -104,11 +104,11 @@ const highlight = keyframes`
 const Container = styled.div`
   text-align: center;
   padding: 20px;
-  background-color: #f5f5f5;
-  width: 100%;
-  
+  background: radial-gradient( circle,#ffffff,#D1E9F6,#F1D3CE,#F6EACB);
+  width: 97.4%;
+  overflow: hidden;
   @media (max-width:){
-    width: 100%;
+    width: 97%;
   }
 `;
 
@@ -143,9 +143,9 @@ const Heading = styled.h1`
 const Box = styled.div`
   text-align: center;
   padding: 20px;
-  background-color: #f8f8f8; /* Light background for each box */
+  background-color: #fffff; /* Light background for each box */
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for each item */
+  //box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for each item */
   width: 100%;
   max-width: 300px; /* Ensure box doesn’t stretch too wide */
 
