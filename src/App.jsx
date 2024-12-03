@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 // Pages
 import Home from './pages/Homepage';
+import About from './pages/about.jsx';
 import Contact from './pages/contact.jsx';
 import Partners from './pages/Partners.jsx';
 import Portfolio from './pages/Portfolio.jsx';
@@ -27,6 +28,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />}/>
         <Route path="/contact" element={<Contact />} />
         <Route path="/partners" element={<Partners />} />
         <Route path="/studentProject" element={<Service />} />
