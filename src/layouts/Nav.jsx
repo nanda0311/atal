@@ -20,7 +20,7 @@ const Navbar = () => {
   };
 
   const goTOContact = () => {
-    navigate("/contact"); // Fixed typo from 'conatct' to 'contact'
+    navigate("/contact"); 
   };
 
   return (

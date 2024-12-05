@@ -26,6 +26,13 @@ const Header = () => {
   const goToPartners = () => {
     navigate("/partners");
   };
+  const goToEvents = () => {
+    navigate("/events");
+  };
+  const goToTenders = () => {
+    navigate("/tenders");
+  };
+
 
   return (
     <div style={styles.headerContainer}>
@@ -69,7 +76,7 @@ const Header = () => {
             </div>
           </div>
           <div className="wrap">
-            <button className="mainitem" onClick={() => toggleDropdown(4)}>Events</button>
+            <button className="mainitem" onClick={() => {goToEvents();toggleDropdown(4);}}>Events</button>
             <div className={`dropitem ${openDropdown === 4 ? "show-dropdown" : ""}`}>
               <Link to="/upcomingEvents" className="menuitem">Upcoming Events</Link>
               <Link to="/outreachEvents" className="menuitem">Outreach Events</Link>
@@ -88,7 +95,7 @@ const Header = () => {
             </div>
           </div>
           <div className="wrap">
-            <button className="mainitem" onClick={() => toggleDropdown(6)}>Tenders</button>
+            <button className="mainitem" onClick={() => {goToTenders();toggleDropdown(6)}}>Tenders</button>
             <div className={`dropitem ${openDropdown === 6 ? "show-dropdown" : ""}`}>
               <Link to="/ongoingTenders" className="menuitem">Ongoing</Link>
               <Link to="/closedTenders" className="menuitem">Closed</Link>

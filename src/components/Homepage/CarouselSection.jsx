@@ -112,17 +112,21 @@ const fadeIn = keyframes`
 const CarouselContainer = styled.div`
     position: relative;
     height: 100vh;
-    width: 1480px;
+    width: 100%;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    @media(min-width:769px){
+        height: 60vh;
+    }
 `;
 
 const CarouselImage = styled.img`
+    display:flex;
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 150%;
     object-fit: cover;
     opacity: ${({ $isActive }) => ($isActive ? 1 : 0)};
     animation: ${({ $isActive, $animationType }) => 
@@ -141,22 +145,21 @@ const Overlay = styled.div`
 
 const TextContent = styled.div`
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
-    padding: 0 1rem;
+    margin-bottom:5px;
+    
+   
 `;
 
 const Title = styled.h1`
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: bold;
+    margin-bottom:0px;
 
     @media (min-width: 768px) {
         font-size: 4rem;
@@ -164,7 +167,7 @@ const Title = styled.h1`
 `;
 
 const Subtitle = styled.h2`
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-top: 10px;
 
     @media (min-width: 768px) {
@@ -172,14 +175,14 @@ const Subtitle = styled.h2`
     }
 `;
 
-const FormSection = styled.div`
+/*const FormSection = styled.div`
     position: absolute;
     bottom: 150px;
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
-    height :10px;
-    width: 200%;
+    height : 90px;
+    width: 40%;
     padding-top: 30px;
 `;
 
@@ -192,7 +195,43 @@ const FormContainer = styled.div`
     align-items: center;
     justify-content: center;
     gap: 1rem;
+`;*/
+
+const FormSection = styled.div`
+    position: absolute;
+    bottom: 40px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 50%; /* Adjust width for mobile */
+    padding-top: 30px;
+
+    @media (max-width: 768px) {
+        bottom: 50px; /* Move it higher for mobile */
+        width: 95%; /* Make it wider to fit smaller screens */
+        padding-top: 10px;
+    }
 `;
+
+const FormContainer = styled.div`
+    background-color: white;
+    padding: 1rem; /* Adjust padding for mobile */
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+                rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+                rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    display: flex;
+    flex-wrap: wrap; /* Ensure proper wrapping for smaller screens */
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem; /* Reduce gap for mobile */
+
+    @media (max-width: 768px) {
+        padding: 0.75rem;
+        gap: 0.25rem;
+    }
+`;
+
 
 const SelectWrapper = styled.div`
     flex: 1;

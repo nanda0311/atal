@@ -9,18 +9,19 @@ import styled, {keyframes,css} from 'styled-components';
 import SocialMedia from '../components/Homepage/SocialMedia';
 import Partner from'../components/Homepage/Partner';
 import { About } from '../components/Homepage/About';
+import Header from '../layouts/Header.jsx'
 
 
 const Home = () => {
   return (
     <Container>
-      
+      {/*<Header/>*/}
       <Carousel />
        {/*   about */}
        <About/>
 
 
-      {/* foucs Area */}
+      {/* foucsArea */}
       <AnimationsContainer>
         <Heading>Focus Area</Heading>
         <Box>
@@ -103,8 +104,12 @@ const highlight = keyframes`
 const Container = styled.div`
   text-align: center;
   padding: 20px;
-  background-color: #f5f5f5;
-  width: 1480px;
+  background: radial-gradient( circle,#ffffff,#D1E9F6,#F1D3CE,#F6EACB);
+  width: 97.4%;
+  overflow: hidden;
+  @media (max-width:){
+    width: 97%;
+  }
 `;
 
 const AnimationsContainer = styled.div`
@@ -131,16 +136,16 @@ const Heading = styled.h1`
   color: #333;
   text-align: center;
   font-weight: bold;
-  opacity: 0;
-  animation: ${blink} 2s infinite ease-in-out;
+  opacity: 1;
+  /*animation: ${blink} 2s infinite ease-in-out;*/
 `;
 
 const Box = styled.div`
   text-align: center;
   padding: 20px;
-  background-color: #f8f8f8; /* Light background for each box */
+  background-color: #fffff; /* Light background for each box */
   border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for each item */
+  //box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for each item */
   width: 100%;
   max-width: 300px; /* Ensure box doesn’t stretch too wide */
 
@@ -148,8 +153,8 @@ const Box = styled.div`
     margin-bottom: 10px;
     font-size: 24px;
     color: #333;
-    opacity: 0;
-    animation: ${highlight} 3s infinite ease-in-out;
+    opacity: 1;
+    /*animation: ${highlight} 3s infinite ease-in-out;*/
   }
 
   /* Lottie Animation Responsive */
