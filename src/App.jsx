@@ -1,6 +1,5 @@
-
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 // Pages
 import Home from './pages/Homepage';
@@ -11,20 +10,13 @@ import Portfolio from './pages/Portfolio.jsx';
 // Layouts
 import Header from './layouts/Header';
 import Footer from './layouts/Footer';
-import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import Home from './pages/Homepage';
-import Header from './layouts/Header';
-import Footer from './layouts/Footer';
-import Contact from './pages/contact.jsx';
-import Partners from './pages/Partners.jsx';
+// Partners Components
 import Academic from './components/Partners/Academic.jsx';
 import Cooperative from './components/Partners/Co-operative.jsx';
 import Investment from './components/Partners/Investment.jsx';
 import IP from './components/Partners/IP.jsx';
 import Network from './components/Partners/Network.jsx';
-
 
 function App() {
   return (
@@ -41,7 +33,6 @@ function App() {
         <Route path="/investmentPartners" element={<Investment />} />
         <Route path="/ipSupporters" element={<IP />} />
         <Route path="/networkingPartners" element={<Network />} />
-
       </Routes>
       <Footer />
     </Router>
