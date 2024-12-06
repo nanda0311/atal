@@ -15,7 +15,11 @@ import TendersAdmin from './Admin/TendersAdmin';
 import Header from './layouts/Header';
 import Footer from './layouts/Footer';
 
+
+// Partners Components
+
 // Components (Partners)
+
 import Academic from './components/Partners/Academic.jsx';
 import Cooperative from './components/Partners/Co-operative.jsx';
 import Investment from './components/Partners/Investment.jsx';
