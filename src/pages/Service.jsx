@@ -195,13 +195,6 @@ const Details = styled.p`
 
 const Service = () => {
   return (
-
-    <div>
-    
-    </div>
-  )
-}
-
     <Container>
       <Title>AIC-PECF Services Offered</Title>
       <Grid>
@@ -214,7 +207,7 @@ const Service = () => {
         ))}
       </Grid>
     </Container>
-
-
+  );
+};
 
 export default Service;
