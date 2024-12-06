@@ -49,11 +49,10 @@ const Events = () => {
 
   const handleDateChange = (date) => {
     const formattedDate = formatDate(date);
-    // Add or remove date from selectedDates
     setSelectedDates((prevDates) =>
       prevDates.includes(formattedDate)
-        ? prevDates.filter((d) => d !== formattedDate)
-        : [...prevDates, formattedDate]
+        ? prevDates.filter((d) => d !== formattedDate) // Unselect if already selected
+        : [...prevDates, formattedDate] // Add the selected date
     );
   };
 
@@ -75,11 +74,11 @@ const Events = () => {
       <div className="calendar-container">
         <Calendar
           onChange={handleDateChange}
-          value={selectedDates.map((date) => new Date(date))}
-          selectRange={false} // Ensure we can select individual dates
+          value={selectedDates.length > 0 ? selectedDates.map((date) => new Date(date)) : []} // Use empty array when no dates are selected
           tileClassName={({ date }) =>
-            selectedDates.includes(formatDate(date)) ? "selected-date" : ""
-          } // Highlight selected dates
+            selectedDates.includes(formatDate(date)) ? "selected-date" : "" // Highlight only selected dates
+          }
+          selectRange={false} // Prevent selecting date ranges
         />
         <div className="button-group">
           <button onClick={handleApply} className="apply-button">
@@ -92,15 +91,22 @@ const Events = () => {
       </div>
 
       <div className="events-container">
-        {displayedEvents.map((event, index) => (
-          <div key={index} className="event-card">
-            <div className="event-date">
-              {event.date} | {event.time}
+        {displayedEvents.map((event, index) => {
+          const eventDate = new Date(event.date);
+          const currentDate = new Date();
+          const isExpired = eventDate < currentDate; // Check if the event date is in the past
+
+          return (
+            <div key={index} className="event-card">
+              <div className={`event-indicator ${isExpired ? "expired" : "available"}`}></div>
+              <div className="event-date">
+                {event.date} | {event.time}
+              </div>
+              <img src={event.poster} alt={event.title} />
+              <h3>{event.title}</h3>
             </div>
-            <img src={event.poster} alt={event.title} />
-            <h3>{event.title}</h3>
-          </div>
-        ))}
+          );
+        })}
       </div>
     </div>
   );
