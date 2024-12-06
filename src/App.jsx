@@ -6,7 +6,7 @@ import Home from './pages/Homepage';
 import About from './pages/about.jsx';
 import Contact from './pages/contact.jsx';
 import Partners from './pages/Partners.jsx';
-import { Portfolio } from './pages/portfolio.jsx';
+import  Portfolio  from './pages/portfolio.jsx';
 import Service from './pages/Service.jsx';
 import Events from './pages/Events.jsx';
 import Tenders from './pages/Tenders'; 
