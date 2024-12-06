@@ -7,5 +7,5 @@ import dummy6 from './dummy6.jpg';
 import dummy7 from './dummy7.jpg';
 import About  from './about.png';
 import Rocket from './rocket.svg';
-
-export { dummy1, dummy2, dummy3,dummy4,dummy5,dummy6,dummy7,About,Rocket };
+import Back from './back.jpg';
+export { dummy1, dummy2, dummy3,dummy4,dummy5,dummy6,dummy7,About,Rocket ,Back};

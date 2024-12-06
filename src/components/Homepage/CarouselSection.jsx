@@ -118,7 +118,7 @@ const CarouselContainer = styled.div`
     justify-content: center;
     align-items: center;
     @media(min-width:769px){
-        height: 60vh;
+        height: 100vh;
     }
 `;
 
@@ -126,7 +126,7 @@ const CarouselImage = styled.img`
     display:flex;
     position: absolute;
     width: 100%;
-    height: 150%;
+    height: 100%;
     object-fit: cover;
     opacity: ${({ $isActive }) => ($isActive ? 1 : 0)};
     animation: ${({ $isActive, $animationType }) => 
@@ -204,7 +204,7 @@ const FormSection = styled.div`
     justify-content: center;
     align-items: center;
     width: 50%; /* Adjust width for mobile */
-    padding-top: 30px;
+    padding-bottom: 150px;
 
     @media (max-width: 768px) {
         bottom: 50px; /* Move it higher for mobile */
