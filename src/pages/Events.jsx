@@ -4,29 +4,42 @@ import "react-calendar/dist/Calendar.css"; // Import calendar styles
 import "./Events.css"; // Add your custom styles here
 
 const Events = () => {
-  const [selectedDate, setSelectedDate] = useState(null); // Initially null to show all events
+  const [selectedDates, setSelectedDates] = useState([]); // Array to hold multiple selected dates
+  const [filteredDates, setFilteredDates] = useState([]); // Dates to filter events
+
   const events = [
     {
       date: "2024-12-05",
       title: "Tech Conference 2024",
       time: "10:00 AM",
-      poster: "src/assets/Aboutpage/s1.jpg",
+      poster: "src/assets/logos/Eventsp1.jpg",
     },
     {
       date: "2024-12-10",
       title: "Art Exhibition",
       time: "3:00 PM",
-      poster: "src/assets/Aboutpage/s2.jpg",
+      poster: "src/assets/logos/Events-2.jpg",
     },
     {
       date: "2024-12-15",
       title: "Music Fest",
       time: "7:00 PM",
-      poster: "src/assets/Aboutpage/s3.jpg",
+      poster: "src/assets/logos/Eventsp3.jpg",
+    },
+    {
+      date: "2024-12-18",
+      title: "Dance Fest",
+      time: "8:00 PM",
+      poster: "src/assets/logos/Eventsp4.jpg",
+    },
+    {
+      date: "2024-12-20",
+      title: "Tech Fest",
+      time: "9:00 PM",
+      poster: "src/assets/logos/Eventsp5.jpg",
     },
   ];
 
-  // Function to format date as YYYY-MM-DD in local timezone
   const formatDate = (date) => {
     const year = date.getFullYear();
     const month = String(date.getMonth() + 1).padStart(2, "0"); // Months are 0-based
@@ -35,19 +48,47 @@ const Events = () => {
   };
 
   const handleDateChange = (date) => {
-    setSelectedDate(formatDate(date)); // Use the formatted date
+    const formattedDate = formatDate(date);
+    // Add or remove date from selectedDates
+    setSelectedDates((prevDates) =>
+      prevDates.includes(formattedDate)
+        ? prevDates.filter((d) => d !== formattedDate)
+        : [...prevDates, formattedDate]
+    );
   };
 
-  const displayedEvents = selectedDate
-    ? events.filter((event) => event.date === selectedDate)
-    : events; // Show all events if no date is selected
+  const handleApply = () => {
+    setFilteredDates(selectedDates);
+  };
+
+  const handleClear = () => {
+    setSelectedDates([]); // Clear selected dates
+    setFilteredDates([]); // Reset filtered dates to show all events
+  };
+
+  const displayedEvents = filteredDates.length
+    ? events.filter((event) => filteredDates.includes(event.date))
+    : events; // Show all events if no dates are selected
 
   return (
     <div className="events-page">
-      <h1>Events Updates</h1>
-
       <div className="calendar-container">
-        <Calendar onChange={handleDateChange} value={selectedDate ? new Date(selectedDate) : new Date()} />
+        <Calendar
+          onChange={handleDateChange}
+          value={selectedDates.map((date) => new Date(date))}
+          selectRange={false} // Ensure we can select individual dates
+          tileClassName={({ date }) =>
+            selectedDates.includes(formatDate(date)) ? "selected-date" : ""
+          } // Highlight selected dates
+        />
+        <div className="button-group">
+          <button onClick={handleApply} className="apply-button">
+            Apply
+          </button>
+          <button onClick={handleClear} className="clear-button">
+            Clear
+          </button>
+        </div>
       </div>
 
       <div className="events-container">
