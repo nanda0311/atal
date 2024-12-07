@@ -29,7 +29,7 @@ const Menu = () => {
             <MenuItem to="/partners">Partners</MenuItem>
             <DropdownContent>
               <DropdownItem to="/academicpartner">Academic Partners</DropdownItem>
-              <DropdownItem to="/co-operativepartners">Co-operative Partners</DropdownItem>
+              <DropdownItem to="/co-operativepartners">Corperate Partners</DropdownItem>
               <DropdownItem to="/ipsupporters">IP Supporters</DropdownItem>
               <DropdownItem to="/networkingpartners">Networking Partners</DropdownItem>
               <DropdownItem to="/investmentpartners">Investment Partners</DropdownItem>

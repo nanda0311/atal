@@ -1,12 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
+import nitLogo from '../../assets/Partnerspage/Academic/NIT.png';
+import ifetlogo from '../../assets/Partnerspage/Academic/IFET.png';
+import pip from '../../assets/Partnerspage/Academic/Pip.png';
+import river from '../../assets/Partnerspage/Academic/River.png';
+import rj from '../../assets/Partnerspage/Academic/RJ.png';
+import smvec from '../../assets/Partnerspage/Academic/SMVEC.png';
 
 const academicPartners = [
-  { name: 'Facebook Research', logo: 'https://via.placeholder.com/150?text=FB' },
-  { name: 'Google AI', logo: 'https://via.placeholder.com/150?text=Google' },
-  { name: 'Microsoft Labs', logo: 'https://via.placeholder.com/150?text=MS' },
-  { name: 'OpenAI', logo: 'https://via.placeholder.com/150?text=OpenAI' },
-];
+  { name: 'NIT Karaikal', logo: nitLogo },
+  { name: 'IFET College of Engineering', logo: ifetlogo },
+  { name: 'PAJANCOA & RI Karaikal ', logo: pip},
+  { name: 'Rajiv Gandhi Institute of Veterinary Education and Research (River) ', logo: river },
+  { name: 'Dr. B. R. Ambedkar Polytechnic CollegeYanam ', logo: rj},
+  { name: 'Sri Manakula Vinayagar Engineering College ', logo: smvec}
+  ];
 
  const Academic = () => {
   return (
@@ -85,7 +93,7 @@ const LogoCard = styled.div`
 const PartnerLogo = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; 
 `;
 
 const LogoInfo = styled.div`
