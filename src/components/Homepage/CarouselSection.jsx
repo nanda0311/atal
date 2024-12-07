@@ -118,11 +118,12 @@ const CarouselContainer = styled.div`
     justify-content: center;
     align-items: center;
     @media(min-width:769px){
-        height: 60vh;
+        height: 100vh;
     }
 `;
 
 const CarouselImage = styled.img`
+    display:flex;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -144,22 +145,21 @@ const Overlay = styled.div`
 
 const TextContent = styled.div`
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     color: white;
-    padding: 0 1rem;
+    margin-bottom:5px;
+    
+   
 `;
 
 const Title = styled.h1`
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     font-weight: bold;
+    margin-bottom:0px;
 
     @media (min-width: 768px) {
         font-size: 4rem;
@@ -167,7 +167,7 @@ const Title = styled.h1`
 `;
 
 const Subtitle = styled.h2`
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin-top: 10px;
 
     @media (min-width: 768px) {
@@ -203,8 +203,8 @@ const FormSection = styled.div`
     display: block;
     justify-content: center;
     align-items: center;
-    width: 90%; /* Adjust width for mobile */
-    padding-top: 30px;
+    width: 50%; /* Adjust width for mobile */
+    padding-bottom: 150px;
 
     @media (max-width: 768px) {
         bottom: 50px; /* Move it higher for mobile */

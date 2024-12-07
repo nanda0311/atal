@@ -3,7 +3,7 @@ import styled, { keyframes } from 'styled-components';
 import Slider from 'react-slick';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye } from '@fortawesome/free-solid-svg-icons';
+//import { faEye } from '@fortawesome/free-solid-svg-icons';
 
 import Image from '../assets/Aboutpage/a.jpg';
 
@@ -93,7 +93,7 @@ const About = () => {
                   />
               </VisionMissionContent>
               <VisionMissionContent>
-                  <h2><FontAwesomeIcon icon={faEye} beatFade /> Our Vision</h2>
+                  <h2>Our Vision</h2>
                   <p>
                       To provide world-class incubation support for Start-ups that promotes technological innovations to improve people's lives, generate employment, and drive the sustainable growth of the Indian economy.
                   </p>  

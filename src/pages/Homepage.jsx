@@ -9,7 +9,7 @@ import styled, {keyframes,css} from 'styled-components';
 import SocialMedia from '../components/Homepage/SocialMedia';
 import Partner from'../components/Homepage/Partner';
 import { About } from '../components/Homepage/About';
-import Header from '../layouts/Header.jsx'
+
 
 
 const Home = () => {
@@ -104,7 +104,7 @@ const highlight = keyframes`
 const Container = styled.div`
   text-align: center;
   padding: 20px;
-  background: radial-gradient( circle,#ffffff,#D1E9F6,#F1D3CE,#F6EACB);
+  
   width: 97.4%;
   overflow: hidden;
   @media (max-width:){

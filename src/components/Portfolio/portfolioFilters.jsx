@@ -1,40 +1,41 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const FilterContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+`;
+
+const FilterButton = styled.button`
+  padding: 0.5rem 1.5rem;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  background-color: ${props => props.active ? '#2563eb' : 'white'};
+  color: ${props => props.active ? 'white' : '#4b5563'};
+  box-shadow: ${props => props.active ? '0 4px 6px rgba(37, 99, 235, 0.2)' : 'none'};
+
+  &:hover {
+    background-color: ${props => props.active ? '#2563eb' : '#f3f4f6'};
+  }
+`;
 
 const PortfolioFilters = ({ categories, activeCategory, onCategoryChange }) => {
   return (
-    <div style={styles.container}>
-      {categories.map(category => (
-        <button
+    <FilterContainer>
+      {categories.map((category) => (
+        <FilterButton
           key={category}
-          style={{
-            ...styles.button,
-            backgroundColor: activeCategory === category ? '#FF5722' : '#f1f1f1', // Orange color
-            color: activeCategory === category ? '#fff' : '#000',
-          }}
+          active={activeCategory === category}
           onClick={() => onCategoryChange(category)}
         >
           {category}
-        </button>
+        </FilterButton>
       ))}
-    </div>
+    </FilterContainer>
   );
-};
-
-const styles = {
-  container: {
-    display: 'flex',
-    justifyContent: 'center',
-    gap: '10px',
-    marginBottom: '20px',
-  },
-  button: {
-    padding: '10px 20px',
-    border: 'none',
-    borderRadius: '5px',
-    cursor: 'pointer',
-    fontSize: '16px',
-    transition: 'background-color 0.3s',
-  },
 };
 
 export default PortfolioFilters;

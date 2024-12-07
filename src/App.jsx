@@ -6,7 +6,7 @@ import Home from './pages/Homepage';
 import About from './pages/about.jsx';
 import Contact from './pages/contact.jsx';
 import Partners from './pages/Partners.jsx';
-import Portfolio from './pages/Portfolio.jsx';
+import  Portfolio  from './pages/Portfolio.jsx';
 import Service from './pages/Service.jsx';
 import Events from './pages/Events.jsx';
 import Tenders from './pages/Tenders'; 
@@ -15,7 +15,11 @@ import TendersAdmin from './Admin/TendersAdmin';
 import Header from './layouts/Header';
 import Footer from './layouts/Footer';
 
+
+// Partners Components
+
 // Components (Partners)
+
 import Academic from './components/Partners/Academic.jsx';
 import Cooperative from './components/Partners/Co-operative.jsx';
 import Investment from './components/Partners/Investment.jsx';
