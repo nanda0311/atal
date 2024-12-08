@@ -77,13 +77,6 @@ const Header = () => {
           </div>
           <div className="wrap">
             <button className="mainitem" onClick={() => {goToEvents();toggleDropdown(4);}}>Events</button>
-            <div className={`dropitem ${openDropdown === 4 ? "show-dropdown" : ""}`}>
-              <Link to="/upcomingEvents" className="menuitem">Upcoming Events</Link>
-              <Link to="/outreachEvents" className="menuitem">Outreach Events</Link>
-              <Link to="/eventGallery" className="menuitem">Event Gallery</Link>
-              <Link to="/registerEvent" className="menuitem">Register</Link>
-              <Link to="/eventSummary" className="menuitem">Summary</Link>
-            </div>
           </div>
           <div className="wrap">
             <button className="mainitem" onClick={() => toggleDropdown(5)}>Funding</button>
