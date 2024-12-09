@@ -1,6 +1,7 @@
 // logos.js
-import ptuLogo from './ptu-logo.png';
-import Aim from './AIM.png';
-import Aic from './AIC.png';
+import ptuLogo from "./ptu-logo.png";
+import Aim from "./AIM.png";
+import Aic from "./AIC.png";
+import downArrow from "./downArrow.png";
 
-export { ptuLogo, Aim, Aic };
+export { ptuLogo, Aim, Aic, downArrow };
