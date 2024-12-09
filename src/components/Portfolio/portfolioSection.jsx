@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { portfolioData } from './data/portfolioData'; 
 import PortfolioFilters from './portfolioFilters';
-import PortfolioCard from './portfolioCard';
+import PortfolioCard from './PortfolioCard';
 import Modal from './UI/Modal';
-import StartupDetails from './StartupDeatil';
+import StartupDetails from './StartupDetail';
 
 const categories = ['All', 'Ongoing', 'Graduated', 'SISFS'];
 

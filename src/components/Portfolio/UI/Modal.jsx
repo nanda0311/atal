@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { X } from 'lucide-react';
+
 
 const Overlay = styled.div`
   position: fixed;
@@ -28,19 +28,6 @@ const Content = styled.div`
   overflow-y: auto;
 `;
 
-const CloseButton = styled.button`
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-  padding: 0.5rem;
-  border-radius: 9999px;
-  transition: background-color 0.2s ease;
-
-  &:hover {
-    background-color: #f3f4f6;
-  }
-`;
-
 const Modal = ({ isOpen, onClose, children }) => {
   if (!isOpen) return null;
 
@@ -48,9 +35,7 @@ const Modal = ({ isOpen, onClose, children }) => {
     <Overlay>
       <Background onClick={onClose} />
       <Content>
-        <CloseButton onClick={onClose}>
-          <X size={20} />
-        </CloseButton>
+       
         {children}
       </Content>
     </Overlay>
