@@ -13,12 +13,10 @@ const Landing = () => {
           Atal Incubation center
         </h1>
         <h4 className="mt-4 text-xl text-center title ">
-          Fueling Innovations, Empowering startups
+          PEC FOUNDATION
         </h4>
       </div>
-      <div className="mt-5 bg-customBlue font-semibold  text-lg px-10 py-3 text-white max-w-fit rounded-full mx-auto">
-        <Link>Apply for Incubation</Link>
-      </div>
+     
       <div className="flex justify-center gap-16 px-32 mt-5 " id="cards">
         <Tilt style={{ width: 1300 }}>
           <div className=" w-full max-h-80 rounded-3xl bg-customBlue overflow-hidden shadow-2xl shadow-customBlue">

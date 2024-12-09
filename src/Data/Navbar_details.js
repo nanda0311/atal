@@ -11,11 +11,11 @@ const Navbar_menu = [
     dropList: [
       {
         title: "Startup Details",
-        link: "/",
+        link: "/startupDetail",
       },
       {
         title: "Students Projects",
-        link: "/",
+        link: "/studentProject",
       },
     ],
   },
@@ -44,84 +44,63 @@ const Navbar_menu = [
   },
   {
     Title: "Partners",
-    link: "/",
+    link: "/partners",
     drop: "active",
     dropList: [
       {
         title: "Academic Partners",
-        link: "/",
+        link: "/academicPartners",
       },
       {
         title: "Co-operative Parnters",
-        link: "/",
+        link: "/cooperativePartners",
       },
       {
         title: "IP Supporterns",
-        link: "/",
+        link: "/ipSupporters",
       },
       {
         title: "Networking Partners",
-        link: "/",
+        link: "/networkingPartners",
       },
       {
         title: "Investment Partners",
-        link: "/",
+        link: "/investmentPartner",
       },
     ],
   },
   {
     Title: "Events",
-    link: "/",
+    link: "/events",
     drop: "active",
-    dropList: [
-      {
-        title: "Upcoming Events",
-        link: "/",
-      },
-      {
-        title: "Outreach Events",
-        link: "/",
-      },
-      {
-        title: "Event Gallery",
-        link: "/",
-      },
-      {
-        title: "Register",
-        link: "/",
-      },
-      {
-        title: "Summary",
-        link: "/",
-      },
-    ],
+    dropList: null,
   },
   {
     Title: "Funding",
-    link: "/",
+    link: "/fundng",
     drop: "active",
     dropList: [
       {
         title: "SISFS",
-        link: "/",
+        link: "/sisfs",
       },
       {
         title: "PROPLEX",
-        link: "/",
+        link: "/proplex",
       },
       {
         title: "Aim Seed Investments",
-        link: "/",
+        link: "/aimseed",
       },
       {
         title: "External Funding Support",
-        link: "/",
+        link: "/external",
       },
     ],
   },
   {
     Title: "Tenders",
-    link: "/",
+    link: "/tenders",
     drop: "active",
     dropList: [
       {
