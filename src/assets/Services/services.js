@@ -14,7 +14,6 @@ import Picture13 from './Picture13.png';
 import Picture14 from './Picture14.png';
 import Picture15 from './Picture15.png';
 import Picture16 from './Picture16.png';
-
 import Picture17 from './Picture17.png';
 import Picture18 from './Picture18.png';
 
