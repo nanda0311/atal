@@ -10,6 +10,7 @@ import SocialMedia from "../components/Homepage/SocialMedia";
 import Partner from "../components/Homepage/Partner";
 import { About } from "../components/Homepage/About";
 import Landing from "../components/Homepage/Landing";
+import AboutNew from "../components/Homepage/AboutNew";
 
 const Home = () => {
   return (
@@ -20,7 +21,8 @@ const Home = () => {
     */}
       <Landing />
       {/*   about */}
-      <About />
+      {/*<About />*/}
+      <AboutNew />
 
       {/* foucsArea */}
       <AnimationsContainer>
@@ -102,9 +104,9 @@ const highlight = keyframes`
 
 const Container = styled.div`
   text-align: center;
-  padding: 20px;
+  padding: 0px;
 
-  width: 97.4%;
+  width: 100%;
   overflow: hidden;
   @media (max-width: ) {
     width: 97%;
