@@ -95,7 +95,7 @@ export const Partner = () => {
       <Slider {...settings}>
         {logos.map((logo, index) => (
           <div key={index} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <div style={{ width: '100%', height: '100px', display: 'flex', justifyContent: 'center', alignItems: 'center', background: '#D7F8FC' }}>
+            <div style={{ width: '100%', height: '100px', display: 'flex', justifyContent: 'center', alignItems: 'center',  }}>
               {logo}
             </div>
           </div>
