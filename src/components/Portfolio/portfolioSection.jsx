@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { portfolioData } from './data/portfolioData'; 
 import PortfolioFilters from './portfolioFilters';
-import PortfolioCard from './PortfolioCard';
+import PortfolioCard from './portfolioCard';
 import Modal from './UI/Modal';
 import StartupDetails from './StartupDetail';
 

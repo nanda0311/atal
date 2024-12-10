@@ -8,10 +8,10 @@ const NavbarOG = () => {
     <div className="py-6 flex justify-center gap-10 items-center">
       <div className="flex gap-10 items-center border-b-4 rounded-3xl border-customBlue px-5 bg-white">
         <div className="w-16 h-16  ">
-          <img src={ptuLogo} className="w-full h-full object-contain" />
+          <img src={Aic} className="w-full h-full object-contain" />
         </div>
-        <div className="w-16 h-16  ">
-          <img src={Aic} className="w-full" />
+        <div className="w-16 h-16 ">
+          <img src={ptuLogo} className="w-full h-full object-contain" />
         </div>
       </div>
       <div className="w-fit scale-95">
