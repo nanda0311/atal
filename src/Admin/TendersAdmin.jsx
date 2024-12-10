@@ -18,16 +18,38 @@ const Input = styled.input`
   border-radius: 4px;
 `;
 
+const FileInput = styled.input`
+  margin: 10px 0;
+`;
+
 const Admin = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [expiryDate, setExpiryDate] = useState("");
+  const [file, setFile] = useState(null);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    axios
-      .post("/api/tenders", { title, description, expiryDate })
-      .then(() => alert("Tender Added"));
+
+    const formData = new FormData();
+    formData.append("title", title);
+    formData.append("description", description);
+    formData.append("expiryDate", expiryDate);
+    if (file) {
+      formData.append("file", file);
+    }
+
+    try {
+      await axios.post("/api/tenders", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
+      alert("Tender Added");
+    } catch (error) {
+      console.error("Error uploading tender:", error);
+      alert("Failed to add tender");
+    }
   };
 
   return (
@@ -48,8 +70,13 @@ const Admin = () => {
         />
         <Input
           type="date"
+           placeholder="Expiry date"
           value={expiryDate}
           onChange={(e) => setExpiryDate(e.target.value)}
+        />
+        <FileInput
+          type="file"
+          onChange={(e) => setFile(e.target.files[0])}
         />
         <button type="submit">Add Tender</button>
       </Form>
