@@ -8,4 +8,7 @@ import dummy7 from './dummy7.jpg';
 import About  from './about.png';
 import Rocket from './rocket.svg';
 import Back from './back.jpg';
-export { dummy1, dummy2, dummy3,dummy4,dummy5,dummy6,dummy7,About,Rocket ,Back};
+import Home1 from './home1.jpg';
+import Home2 from './home2.jpg';
+import Home3 from './home3.jpg'
+export { dummy1, dummy2, dummy3,dummy4,dummy5,dummy6,dummy7,About,Rocket ,Back,Home1, Home2, Home3 };
