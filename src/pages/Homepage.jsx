@@ -1,25 +1,28 @@
-import React from 'react';
-import Carousel from '../components/Homepage/CarouselSection';
-import Stats from '../components/Homepage/Stat';
-import { Player } from '@lottiefiles/react-lottie-player';
-import iot from '../assets/Homepage/iot.json';
-import uav from '../assets/Homepage/uav.json';
-import edm from '../assets/Homepage/edm.json';
-import styled, {keyframes,css} from 'styled-components';
-import SocialMedia from '../components/Homepage/SocialMedia';
-import Partner from'../components/Homepage/Partner';
-import { About } from '../components/Homepage/About';
-
-
+import React from "react";
+import Carousel from "../components/Homepage/CarouselSection";
+import Stats from "../components/Homepage/Stat";
+import { Player } from "@lottiefiles/react-lottie-player";
+import iot from "../assets/Homepage/iot.json";
+import uav from "../assets/Homepage/uav.json";
+import edm from "../assets/Homepage/edm.json";
+import styled, { keyframes, css } from "styled-components";
+import SocialMedia from "../components/Homepage/SocialMedia";
+import Partner from "../components/Homepage/Partner";
+import { About } from "../components/Homepage/About";
+import Landing from "../components/Homepage/Landing";
+import AboutNew from "../components/Homepage/AboutNew";
 
 const Home = () => {
   return (
     <Container>
       {/*<Header/>*/}
+      {/*
       <Carousel />
-       {/*   about */}
-       <About/>
-
+    */}
+      <Landing />
+      {/*   about */}
+      {/*<About />*/}
+      <AboutNew />
 
       {/* foucsArea */}
       <AnimationsContainer>
@@ -30,7 +33,7 @@ const Home = () => {
             autoplay
             loop
             src={edm}
-            style={{ height: '300px', width: '300px' }}
+            style={{ height: "300px", width: "300px" }}
           />
         </Box>
         <Box>
@@ -39,7 +42,7 @@ const Home = () => {
             autoplay
             loop
             src={uav}
-            style={{ height: '300px', width: '300px' }}
+            style={{ height: "300px", width: "300px" }}
           />
         </Box>
         <Box>
@@ -48,20 +51,18 @@ const Home = () => {
             autoplay
             loop
             src={iot}
-            style={{ height: '300px', width:  '300px' }}
+            style={{ height: "300px", width: "300px" }}
           />
         </Box>
       </AnimationsContainer>
-      
-     {/* SocialMedia */}
-     <SocialMedia/>
-     
+
+      {/* SocialMedia */}
+      <SocialMedia />
+
       {/* stats */}
-      <Stats/>
+      <Stats />
 
-
-      <Partner/>
-
+      <Partner />
     </Container>
   );
 };
@@ -81,7 +82,7 @@ const blink = keyframes`
     color: #333;
     opacity: 1;
   }
-`; 
+`;
 
 const highlight = keyframes`
   0%{
@@ -103,11 +104,11 @@ const highlight = keyframes`
 
 const Container = styled.div`
   text-align: center;
-  padding: 20px;
-  
-  width: 97.4%;
+  padding: 0px;
+
+  width: 100%;
   overflow: hidden;
-  @media (max-width:){
+  @media (max-width: ) {
     width: 97%;
   }
 `;
@@ -163,7 +164,7 @@ const Box = styled.div`
     max-width: 300px;
     height: auto;
   }
-  
+
   /* For smaller screens */
   @media (max-width: 480px) {
     padding: 15px;

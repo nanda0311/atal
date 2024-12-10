@@ -83,9 +83,7 @@ const PortfolioCard = ({
       <Content>
         <Title>{title}</Title>
         <Description>{description}</Description>
-        <LearnMore>
-          Learn More <ExternalLink size={16} />
-        </LearnMore>
+       
       </Content>
     </Card>
   );

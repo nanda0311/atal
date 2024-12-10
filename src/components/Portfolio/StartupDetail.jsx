@@ -17,7 +17,7 @@ const ImageContainer = styled.div`
 const Image = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: ;
 `;
 
 const CategoryBadge = styled.span`
@@ -88,57 +88,64 @@ const Button = styled.button`
   }
 `;
 
-const StartupDetails = ({ startup }) => {
+const StartupDetails = ({ startup }) => (
+  <Container>
+    <ImageContainer>
+      <Image src={startup.image} alt={startup.title} />
+      <CategoryBadge>{startup.category}</CategoryBadge>
+    </ImageContainer>
+
+    <Title>{startup.title}</Title>
+
+    <InfoGrid>
+      <InfoItem>
+        <Calendar size={20} />
+        <span>Founded: {startup.founded}</span>
+      </InfoItem>
+      <InfoItem>
+        <Users size={20} />
+        <span>Revenue Generated: {startup.revenue}</span>
+      </InfoItem>
+      <InfoItem>
+        <Target size={20} />
+        <span>Sector: {startup.sector}</span>
+      </InfoItem>
+      <InfoItem>
+        <Award size={20} />
+        <span>Jobs created: {startup.jobs}</span>
+      </InfoItem>
+    </InfoGrid>
+
+    <Section>
+      <SectionTitle>About</SectionTitle>
+      <Text>{startup.description}</Text>
+    </Section>
+
+    <Section>
+      <SectionTitle>Key Achievements</SectionTitle>
+      <List>
+        {startup.achievements.map((achievement, index) => (
+          <li key={index}>{achievement}</li>
+        ))}
+      </List>
+    </Section>
+  </Container>
+);
+
+const App = () => {
+  const [selectedStartup, setSelectedStartup] = useState(startupData[0]);
+
   return (
-    <Container>
-      <ImageContainer>
-        <Image src={startup.image} alt={startup.title} />
-        <CategoryBadge>{startup.category}</CategoryBadge>
-      </ImageContainer>
-
-      <Title>{startup.title}</Title>
-      
-      <InfoGrid>
-        <InfoItem>
-          <Calendar size={20} />
-          <span>Founded: 2023</span>
-        </InfoItem>
-        <InfoItem>
-          <Users size={20} />
-          <span>Team Size: 15+</span>
-        </InfoItem>
-        <InfoItem>
-          <Target size={20} />
-          <span>Stage: {startup.category}</span>
-        </InfoItem>
-        <InfoItem>
-          <Award size={20} />
-          <span>DPIIT Recognized</span>
-        </InfoItem>
-      </InfoGrid>
-
-      <Section>
-        <SectionTitle>About</SectionTitle>
-        <Text>{startup.description}</Text>
-      </Section>
-
-      <Section>
-        <SectionTitle>Key Achievements</SectionTitle>
-        <List>
-          <li>Successfully completed pilot with major industry partners</li>
-          <li>Secured seed funding of ₹50 lakhs</li>
-          <li>Achieved 100% YoY growth</li>
-        </List>
-      </Section>
-
-      <Section>
-        <SectionTitle>Contact</SectionTitle>
-        <Text>
-          For more information or collaboration opportunities, please reach out to us.
-        </Text>
-        <Button>Get in Touch</Button>
-      </Section>
-    </Container>
+    <div>
+      <StartupList>
+        {startupData.map((startup) => (
+          <Card key={startup.id} onClick={() => setSelectedStartup(startup)}>
+            <h3>{startup.title}</h3>
+          </Card>
+        ))}
+      </StartupList>
+      <StartupDetails startup={selectedStartup} />
+    </div>
   );
 };
 
