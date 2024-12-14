@@ -1,25 +1,39 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Aic, Aim, ptuLogo } from "../assets/logos/logs";
 import { NavbarDemo } from "./Navbar";
 
 const NavbarOG = () => {
   const [showLoginPopup, setShowLoginPopup] = useState(false); // State for popup visibility
+  const [aimClickCount, setAimClickCount] = useState(0); // State for tracking Aim logo clicks
+  const navigate = useNavigate();
 
   const handleLogoClick = () => {
-    setShowLoginPopup(true); // Show the login popup
+    setAimClickCount((prevCount) => {
+      const newCount = prevCount + 1;
+      if (newCount === 3) {
+        setShowLoginPopup(true); // Show login popup on the third click
+        return 0; // Reset count
+      }
+      return newCount;
+    });
   };
 
   const closePopup = () => {
     setShowLoginPopup(false); // Close the popup
   };
 
+  const goToHome = () => {
+    navigate("/"); // Navigate to home page
+  };
+
   return (
     <div className="relative py-6 flex justify-center gap-10 items-center">
       <div className="flex gap-10 items-center border-b-4 rounded-3xl border-customBlue px-5 bg-white">
-        <div className="w-16 h-16 cursor-pointer" onClick={handleLogoClick}>
+        <div className="w-16 h-16 cursor-pointer" onClick={goToHome}>
           <img src={Aic} className="w-full h-full object-contain" alt="AIC Logo" />
         </div>
-        <div className="w-16 h-16">
+        <div className="w-16 h-16 cursor-pointer" onClick={goToHome}>
           <img src={ptuLogo} className="w-full h-full object-contain" alt="PTU Logo" />
         </div>
       </div>
@@ -27,7 +41,9 @@ const NavbarOG = () => {
         <NavbarDemo />
       </div>
       <div className="max-w-32 h-16 flex items-center border-b-4 rounded-3xl border-customBlue px-5 bg-white">
-        <img src={Aim} alt="Aim Logo" className="w-full h-full object-contain" />
+        <div className="w-16 h-16 cursor-pointer" onClick={handleLogoClick}>
+          <img src={Aim} alt="Aim Logo" className="w-full h-full object-contain" />
+        </div>
       </div>
 
       {showLoginPopup && (
