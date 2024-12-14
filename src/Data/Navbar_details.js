@@ -72,7 +72,6 @@ const Navbar_menu = [
   {
     Title: "Events",
     link: "/events",
-    drop: "active",
     dropList: null,
   },
   {
@@ -101,17 +100,7 @@ const Navbar_menu = [
   {
     Title: "Tenders",
     link: "/tenders",
-    drop: "active",
-    dropList: [
-      {
-        title: "Ongoing",
-        link: "/",
-      },
-      {
-        title: "Closed",
-        link: "/",
-      },
-    ],
+    dropList: null,
   },
   {
     Title: "Contact Us",
