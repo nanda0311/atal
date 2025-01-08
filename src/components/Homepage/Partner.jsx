@@ -2,35 +2,8 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import AIM from "../../assets/Homepage/Partners/AIM.png";
-import PTU from "../../assets/Homepage/Partners/PTU.png";
-import Seed from "../../assets/Homepage/Partners/Seed.png";
-import Start from "../../assets/Homepage/Partners/START.png";
-import Eagle from "../../assets/Homepage/Partners/Eagle.png";
-import Schn from "../../assets/Homepage/Partners/Schn.png";
-import S from "../../assets/Homepage/Partners/S.png";
-import Bee from "../../assets/Homepage/Partners/Bee.png"
-import CII from "../../assets/Homepage/Partners/CII.png";
-import MSME from "../../assets/Homepage/Partners/MSME.png";
-import BCIL from "../../assets/Homepage/Partners/BCIL.png";
-import Digi from "../../assets/Homepage/Partners/360.png";
-import Idea from "../../assets/Homepage/Partners/Idea.png";
-import Easy from "../../assets/Homepage/Partners/Easy.png";
-import Lucas from "../../assets/Homepage/Partners/Lucas.png";
-import Kris from "../../assets/Homepage/Partners/Kris.png";
-import Ktech from "../../assets/Homepage/Partners/Ktech.png";
-import touch from "../../assets/Homepage/Partners/touch.png";
-import START from "../../assets/Homepage/Partners/START.png";
-import Resuegent from "../../assets/Homepage/Partners/Resuegent.png";
-import Zoho from "../../assets/Homepage/Partners/Zoho.png";
-import Pip from "../../assets/Homepage/Partners/Pip.png";
-import RJ from "../../assets/Homepage/Partners/RJ.png";
-import NIT from "../../assets/Homepage/Partners/NIT.png";
-import River from "../../assets/Homepage/Partners/River.png";
-import SMVEC from "../../assets/Homepage/Partners/SMVEC.png";
-import IFET from "../../assets/Homepage/Partners/IFET.png";
-import aws from "../../assets/Homepage/Partners/aws.png";
-
+import { AIM, PTU, aws, IFET, SMVEC, River, NIT, RJ, Pip, Zoho, Resuegent, START, touch, Ktech, Kris, Lucas,
+  Easy, Idea, Seed, Start, Schn, Eagle, S, Bee, CII, MSME, BCIL, Digi } from '../../assets/Homepage/Partners/Keypartner';
 
 export const Partner = () => {
   const logos = [
@@ -62,11 +35,6 @@ export const Partner = () => {
     <img src={SMVEC} alt="Digi Logo" style={{ width: 130, height: 50 }} />,
     <img src={IFET} alt="Digi Logo" style={{ width: 130, height: 50 }} />,
     <img src={aws} alt="Digi Logo" style={{ width: 90, height: 50 }} />,
-    /*<FaInstagram size={50} color="#C13584" />,
-    <FaLinkedin size={50} color="#0077B5" />,
-    <FaYoutube size={50} color="#FF0000" />,
-    <FaGithub size={50} color="#333" />,
-    <FaTiktok size={50} color="#000000" />,*/
   ];
 
   const settings = {
@@ -77,6 +45,8 @@ export const Partner = () => {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 2000,
+    centerMode: true, // Enables centering of items for better 3D effect
+    focusOnSelect: true, // Makes items selectable
     responsive: [
       {
         breakpoint: 768,
@@ -90,12 +60,12 @@ export const Partner = () => {
   };
 
   return (
-    <div className="partner-carousel">
+    <div className="partner-carousel" style={{ perspective: '1500px', paddingBottom: '50px' }}>
       <h2 style={{ textAlign: 'center', marginBottom: '20px', color: '#333' }}>OUR PARTNERS</h2>
       <Slider {...settings}>
         {logos.map((logo, index) => (
-          <div key={index} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <div style={{ width: '100%', height: '100px', display: 'flex', justifyContent: 'center', alignItems: 'center',  }}>
+          <div key={index} style={{ transform: `rotateY(${index * 15}deg)`, transition: 'transform 0.5s', padding: '10px' }}>
+            <div style={{ width: '100%', height: '100px', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
               {logo}
             </div>
           </div>
