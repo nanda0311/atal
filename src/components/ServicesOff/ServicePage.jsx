@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-import { 
-  Picture1, Picture2, Picture3, Picture4, Picture5, Picture6, 
-  Picture7, Picture8, Picture9, Picture10, Picture11, Picture12, 
-  Picture13, Picture14, Picture15, Picture16, Picture17, Picture18 ,Pic1,Pic2,Pic3,Pic4,Pic5
+import {
+  Picture1, Picture2, Picture3, Picture4, Picture5, Picture6,
+  Picture7, Picture8, Picture9, Picture10, Picture11, Picture12,
+  Picture13, Picture14, Picture15, Picture16, Picture17, Picture18, Pic1, Pic2, Pic3, Pic4, Pic5
 } from '../../assets/Services/services';
 
 const SinglePage = () => {
@@ -14,13 +14,13 @@ const SinglePage = () => {
     setFilter(filterType);
   };
 
-  const filterOptions = ['All', 'Prototype', 'Software','Student innvation'];
+  const filterOptions = ['All', 'Prototype', 'Software', 'Student innvation'];
 
   const services = [
     {
       title: 'PICK AND PLACE MACHINE',
-      logo: Picture1, 
-      details: `Model Name: SMTMATE 660 No of Feeder: 64 Element for mounting: 0201, 0402, 0603, 0805, 1206,SOT, SOD, SOP, SSOP, QFN, VCQFN, BGA. Max chip size: 40*40mm`,
+      logo: Picture1,
+      details: `Model Name: SMTMATE 660 No of Feeder: 64 Element for mounting: 0201, 0402, 0603, 0805, 1206, SOT, SOD, SOP, SSOP, QFN, VCQFN, BGA. Max chip size: 40*40mm`,
       type: 'Prototype',
     },
     {
@@ -44,7 +44,7 @@ const SinglePage = () => {
     {
       title: 'WEGSTR PCB PROTOTYPING MACHINE',
       logo: Picture5,
-      details: `Model Name: Wegstr CNC Milling workspace: (140*200*40) (X*Y*Z) mm Working Material: Wood,Aluminium,PCB,copper,Gold,Silver.`,
+      details: `Model Name: Wegstr CNC Milling workspace: (140*200*40) (X*Y*Z) mm Working Material: Wood, Aluminium, PCB, Copper, Gold, Silver.`,
       type: 'Prototype',
     },
     {
@@ -162,6 +162,8 @@ const SinglePage = () => {
   return (
     <Container>
       <Heading>AIC-PECF Service & Supports</Heading>
+
+      {/* Desktop Filter Buttons */}
       <FilterContainer>
         {filterOptions.map((option) => (
           <FilterButton
@@ -173,6 +175,21 @@ const SinglePage = () => {
           </FilterButton>
         ))}
       </FilterContainer>
+
+      {/* Mobile Dropdown */}
+      <MobileFilterContainer>
+        <select 
+          onChange={(e) => handleFilter(e.target.value)} 
+          value={filter}
+        >
+          {filterOptions.map((option) => (
+            <option key={option} value={option}>
+              {option}
+            </option>
+          ))}
+        </select>
+      </MobileFilterContainer>
+
       <CardsContainer>
         {filteredServices.map((service) => (
           <Card key={service.title}>
@@ -223,6 +240,27 @@ const FilterButton = styled.button`
   }
 `;
 
+// Mobile Dropdown
+const MobileFilterContainer = styled.div`
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block; /* Show dropdown on mobile view */
+    margin-bottom: 20px;
+    text-align: center;
+
+    select {
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-size: 16px;
+      width: 100%;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+  }
+`;
+
 const CardsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 cards per row on large screens */
@@ -253,6 +291,12 @@ const Card = styled.div`
   flex-direction: column;
   justify-content: space-between; /* Distribute content evenly */
   align-items: center;
+
+  &:hover {
+    box-shadow: 0 6px 15px #333; /* Adds a subtle shadow on hover */
+    transform: scale(1.05); /* Slightly zooms in the image */
+    transition: all 0.3s ease-in-out; /* Smooth transition */
+  }
 `;
 
 const CardImage = styled.img`
@@ -276,3 +320,4 @@ const CardDescription = styled.p`
   color: #555;
   text-align: center;
 `;
+
