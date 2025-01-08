@@ -24,6 +24,7 @@ import IP from "./components/Partners/IPsupport.jsx";
 import Network from "./components/Partners/Network.jsx";
 import NavbarOG from "./layouts/NavbarOG.jsx";
 
+
 function App() {
   return (
     <Router>
