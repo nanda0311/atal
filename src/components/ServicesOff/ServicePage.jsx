@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-// Import the images
+
 import { 
   Picture1, Picture2, Picture3, Picture4, Picture5, Picture6, 
   Picture7, Picture8, Picture9, Picture10, Picture11, Picture12, 
-  Picture13, Picture14, Picture15, Picture16, Picture17, Picture18 
+  Picture13, Picture14, Picture15, Picture16, Picture17, Picture18 ,Pic1,Pic2,Pic3,Pic4,Pic5
 } from '../../assets/Services/services';
 
 const SinglePage = () => {
@@ -14,7 +14,7 @@ const SinglePage = () => {
     setFilter(filterType);
   };
 
-  const filterOptions = ['All', 'Portotype', 'Software','Student innvation'];
+  const filterOptions = ['All', 'Portotype ', 'Software','Student innvation'];
 
   const services = [
     {
@@ -124,6 +124,36 @@ const SinglePage = () => {
       logo: Picture18,
       details: `Model Name: ALTAIR MULTIPHYSICS/ MECHATRONICS ENGINEER SUITE No of users: 1(full package) + 30(lab license) Nature of License: Perpetual`,
       type: 'Software',
+    },
+    {
+      title: '3D PRINTER',
+      logo: Pic1,
+      details: ``,
+      type: 'Student innvation',
+    },
+    {
+      title: 'CNC PLOTTER',
+      logo: Pic2,
+      details: ``,
+      type: 'Student innvation',
+    },
+    {
+      title: '3D SCANNER',
+      logo: Pic3,
+      details: ``,
+      type: 'Student innvation',
+    },
+    {
+      title: 'E-CUBE',
+      logo: Pic4,
+      details: ``,
+      type: 'Student innvation',
+    },
+    {
+      title: 'SOLAR DRYER',
+      logo: Pic5,
+      details: ``,
+      type: 'Student innvation',
     },
   ];
 
