@@ -205,6 +205,68 @@
   background: #e0e0e0;
   color: #f06a2c; /* Change text color when hovering */
 }
+.outreach-image {
+  max-width: 100%;
+  height: auto;
+  margin: 20px auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.program-pillars {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.program-pillars h3 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.pillars-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.pillar-box {
+  width: 200px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pillar-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.pillar-icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.pillar-box h4 {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 8px;
+}
+
+.pillar-box p {
+  font-size: 14px;
+  color: #666;
+}
+
 /* General Mobile Styles */
 @media (max-width: 768px) {
   .events-page {
