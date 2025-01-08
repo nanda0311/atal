@@ -14,80 +14,80 @@ const SinglePage = () => {
     setFilter(filterType);
   };
 
-  const filterOptions = ['All', 'Portotype ', 'Software','Student innvation'];
+  const filterOptions = ['All', 'Prototype', 'Software','Student innvation'];
 
   const services = [
     {
       title: 'PICK AND PLACE MACHINE',
       logo: Picture1, 
       details: `Model Name: SMTMATE 660 No of Feeder: 64 Element for mounting: 0201, 0402, 0603, 0805, 1206,SOT, SOD, SOP, SSOP, QFN, VCQFN, BGA. Max chip size: 40*40mm`,
-      type: 'Portotype',
+      type: 'Prototype',
     },
     {
       title: '3D SCANNER',
       logo: Picture2,
       details: `Model name: EinScan Pro HD Scan Accuracy: upto 0.045mm Output Formats: OBJ, STL, ASC, PLY, P3, 3MF Supported OS: win10,(64bit)`,
-      type: 'Portotype',
+      type: 'Prototype',
     },
     {
       title: '3D PRINTER',
       logo: Picture3,
       details: `Model Name: Raise3D E2 3D Printer Material Type: PLA Print Head Travel Speed: 15–150 mm/s Machine Code Type: GCODE`,
-      type: 'Portotype',
+      type: 'Prototype',
     },
     {
       title: 'RESIN 3D PRINTER',
       logo: Picture4,
       details: `Model name: Phrozen Sonic Mega 8K 3D Printer size: 475x400x680mm Print volume: 330x185x400mm Max printing speed: 70mm/hr`,
-      type: 'Portotype',
+      type: 'Prototype',
     },
     {
       title: 'WEGSTR PCB PROTOTYPING MACHINE',
       logo: Picture5,
-      details: `Model Name: Wegstr CNC Milling workspace: (140*200*40) (X*Y*Z) mm Working Material: Wood, Aluminium, PCB, copper, Gold, Silver.`,
-      type: 'Portotype',
+      details: `Model Name: Wegstr CNC Milling workspace: (140*200*40) (X*Y*Z) mm Working Material: Wood,Aluminium,PCB,copper,Gold,Silver.`,
+      type: 'Prototype',
     },
     {
       title: 'LASER CUTTING MACHINE',
       logo: Picture6,
       details: `Model Name: Flux Beam Box Pro Operating Power: 50w Max Cutting Depth: 12mm Versatile: Cutting and Engraving`,
-      type: 'Portotype',
+      type: 'Prototype',
     },
     {
       title: 'SKYRC 1080 CHARGER FOR LIPO',
       logo: Picture7,
       details: `Model Name: Tattu 22000mAh (6S) Dimension: 206mm Length x 91mm Width x 61mm Height Material: Lithium Polymer`,
-      type: 'Portotype',
+      type: 'Prototype',
     },
     {
       title: 'CELL IMPEDANCE TESTER',
       logo: Picture8,
       details: `Model Name: BT3563A Max voltage measurement: 300v Response time: 10ms Resistance measurement ranges: 3 mΩ/30 mΩ/300 mΩ/3 Ω/ 30 Ω/300 Ω/3 kΩ`,
-      type: 'Portotype',
+      type: 'Prototype',
     },
     {
       title: 'INVERTER WELDING MACHINE',
       logo: Picture9,
       details: `MODEL NO: TIG 200 INPUT POWER SUPPLY: I phase, 230v AC RATED CURRENT: 17A EFFICIENCY: 85%`,
-      type: 'Portotype',
+      type: 'Prototype',
     },
     {
       title: 'SPOT WELDING MACHINE',
       logo: Picture10,
       details: `Model No: SUNKKO 737G Operating Voltage: 220v Portable Pedal Switch Operated`,
-      type: 'Portotype',
+      type: 'Prototype',
     },
     {
       title: 'AGRICULTURE DRONE',
       logo: Picture11,
       details: `Model Name: Agri Drone (10L) Dimension: 1495*1308*500mm Material: Carbon Fiber`,
-      type: 'Portotype',
+      type: 'Prototype',
     },
     {
       title: 'GIMBAL',
       logo: Picture12,
       details: `Model name: Tarot FLIR Metal 3 Axis gimbal Milling workspace: (140*200*40) (X*Y*Z) mm Working Material: FLIR thermal imaging cameras Flir VUE 336, VUE640`,
-      type: 'Portotype',
+      type: 'Prototype',
     },
     {
       title: 'LIDAR 360 SOFTWARE',
@@ -126,7 +126,7 @@ const SinglePage = () => {
       type: 'Software',
     },
     {
-      title: '3D PRINTER',
+      title: '3DPRINTER',
       logo: Pic1,
       details: ``,
       type: 'Student innvation',
@@ -138,7 +138,7 @@ const SinglePage = () => {
       type: 'Student innvation',
     },
     {
-      title: '3D SCANNER',
+      title: '3DSCANNER',
       logo: Pic3,
       details: ``,
       type: 'Student innvation',
@@ -225,8 +225,19 @@ const FilterButton = styled.button`
 
 const CardsContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row on large screens */
+  gap: 50px; /* Equal spacing between cards */
+  justify-content: center;
+  padding: 20px; /* Space around the entire grid container */
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards per row on medium screens */
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr; /* 1 card per row on small screens */
+    gap: 20px;
+  }
 `;
 
 const Card = styled.div`
@@ -234,23 +245,34 @@ const Card = styled.div`
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px; /* Space between each card and its neighbors */
+  width: 100%; /* Ensure cards stretch to fit the grid column */
+  max-width: 300px; /* Optional: Limit the max width for consistency */
+  height: 400px; /* Ensure all cards are of equal height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribute content evenly */
+  align-items: center;
 `;
 
 const CardImage = styled.img`
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+  width: 100%; /* Full width of the card */
+  max-width: 250px; /* Limit the maximum width of the image */
+  height: 200px; /* Fixed height for images to ensure uniformity */
+  object-fit: contain; /* Ensures the image fits without cropping */
   border-radius: 10px;
+  background-color: pure white; /* Optional: Background for images with transparency */
   margin-bottom: 15px;
 `;
 
 const CardTitle = styled.h3`
   font-size: 20px;
   margin-bottom: 10px;
+  text-align: center; /* Center-align text for better aesthetics */
 `;
 
 const CardDescription = styled.p`
   font-size: 16px;
   color: #555;
+  text-align: center;
 `;
-
