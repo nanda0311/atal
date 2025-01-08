@@ -1,18 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import digi from '../../assets/Partnerspage/Corporate/360.png';
-import di from '../../assets/Partnerspage/Corporate/1000.png';
-import Easy from '../../assets/Partnerspage/Corporate/easy.png';
-import idea from '../../assets/Partnerspage/Corporate/Ideation.png';
-import kris from '../../assets/Partnerspage/Corporate/Kris.png';
-import ktech from '../../assets/Partnerspage/Corporate/Ktech.png';
-import lucas from '../../assets/Partnerspage/Corporate/Lucas.png';
-import re from '../../assets/Partnerspage/Corporate/Resuegent.png';
-import schneider from '../../assets/Partnerspage/Corporate/Schneider.png';
-import tele from '../../assets/Partnerspage/Corporate/Tele.png';
-import touch from '../../assets/Partnerspage/Corporate/Touch.png';
-import zoho from '../../assets/Partnerspage/Corporate/Zoho.png';
-
+import {di,digi,Easy,idea,kris,ktech,lucas,re,schneider,tele,touch,zoho} from '../../assets/Partnerspage/Corporate/CooperatePartner';
 
 const Cooperative = () => {
   const cooperativePartners = [

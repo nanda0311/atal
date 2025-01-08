@@ -10,31 +10,31 @@ const Events = () => {
 
   const events = [
     {
-      date: "2024-12-05",
+      date: "2025-01-11",
       title: "Tech Conference 2024",
       time: "10:00 AM",
       poster: "src/assets/logos/Eventsp1.jpg",
     },
     {
-      date: "2024-12-10",
+      date: "2025-01-10",
       title: "Art Exhibition",
       time: "3:00 PM",
       poster: "src/assets/logos/Events-2.jpg",
     },
     {
-      date: "2024-12-15",
+      date: "2025-01-15",
       title: "Music Fest",
       time: "7:00 PM",
       poster: "src/assets/logos/Eventsp3.jpg",
     },
     {
-      date: "2024-12-18",
+      date: "2025-01-07",
       title: "Dance Fest",
       time: "8:00 PM",
       poster: "src/assets/logos/Eventsp4.jpg",
     },
     {
-      date: "2024-12-20",
+      date: "2025-01-20",
       title: "Tech Fest",
       time: "9:00 PM",
       poster: "src/assets/logos/Eventsp5.jpg",
@@ -128,15 +128,63 @@ const Events = () => {
         </div>
       )}
 
-      {activeTab === "Outreach Events" && (
-        <div className="outreach-tab">
-          <h2>Outreach Events</h2>
-          <img src="path-to-your-image.jpg" alt="Outreach Event" className="outreach-image" />
-          <p className="outreach-paragraph">
-            This is a description for outreach events. Here you can explain the purpose of outreach events, how they contribute to the community, and what people can expect from them. It can be a detailed description, including the target audience, objectives, and any specific activities or locations associated with the event.
-          </p>
+{activeTab === "Outreach Events" && (
+  <div className="outreach-tab">
+    <img
+      src="src/assets/logos/Outreach.png"
+      alt="Outreach Event"
+      className="outreach-image"
+    />
+
+    {/* Program Pillars Section */}
+    <div className="program-pillars">
+      <h3>Program Pillars</h3>
+      <div className="pillars-container">
+        {/* Pillar 1 */}
+        <div className="pillar-box">
+          <img
+            src="src/assets/logos/OP1.png"
+            alt="Pillar 1"
+            className="pillar-icon"
+          />
+          <h4>Community Engagement</h4>
+          <p>Fostering connections and building stronger communities.</p>
         </div>
-      )}
+        {/* Pillar 2 */}
+        <div className="pillar-box">
+          <img
+            src="src/assets/logos/OP2.png"
+            alt="Pillar 2"
+            className="pillar-icon"
+          />
+          <h4>Education</h4>
+          <p>Promoting learning opportunities and knowledge sharing.</p>
+        </div>
+        {/* Pillar 3 */}
+        <div className="pillar-box">
+          <img
+            src="src/assets/logos/OP3.png"
+            alt="Pillar 3"
+            className="pillar-icon"
+          />
+          <h4>Innovation</h4>
+          <p>Encouraging creativity and forward-thinking solutions.</p>
+        </div>
+        {/* Pillar 4 */}
+        <div className="pillar-box">
+          <img
+            src="src/assets/logos/OP4.png"
+            alt="Pillar 4"
+            className="pillar-icon"
+          />
+          <h4>Sustainability</h4>
+          <p>Focusing on long-term environmental and social impacts.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+)}
+
 
       {activeTab === "Register" && (
         <div className="register-tab">
