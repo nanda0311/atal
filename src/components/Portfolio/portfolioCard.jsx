@@ -1,15 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ExternalLink } from 'lucide-react';
+
+const CardContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Allows multiple cards to wrap */
+  gap: 1.5rem; /* Adjusts the space between cards */
+  margin: 2rem 0; /* Adds some space around the container */
+`;
 
 const Card = styled.div`
   background-color: white;
   border-radius: 0.75rem;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  height: 100%;
+  width: 300px; /* Fixed width for consistent card sizes */
+  display: flex;
+  flex-direction: column;
   cursor: pointer;
-
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
   &:hover {
     transform: translateY(-4px);
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
@@ -19,13 +29,16 @@ const Card = styled.div`
 const ImageContainer = styled.div`
   position: relative;
   height: 12rem;
+  width: 12rem; /* Ensure the container is square */
   overflow: hidden;
+  border-radius: 50%; /* Makes the container circular */
+  margin: 1rem auto; /* Centers the circle within the card */
 `;
 
 const Image = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Ensures the image fills the circular frame */
 `;
 
 const CategoryBadge = styled.span`
@@ -50,30 +63,7 @@ const Title = styled.h3`
   margin-bottom: 0.5rem;
 `;
 
-const Description = styled.p`
-  color: #4b5563;
-  margin-bottom: 1rem;
-`;
-
-const LearnMore = styled.div`
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: #2563eb;
-  transition: color 0.2s ease;
-
-  &:hover {
-    color: #1d4ed8;
-  }
-`;
-
-const PortfolioCard = ({
-  title,
-  description,
-  image,
-  category,
-  onClick,
-}) => {
+const PortfolioCard = ({ title, image, category, onClick }) => {
   return (
     <Card onClick={onClick}>
       <ImageContainer>
@@ -82,11 +72,23 @@ const PortfolioCard = ({
       </ImageContainer>
       <Content>
         <Title>{title}</Title>
-        <Description>{description}</Description>
-       
       </Content>
     </Card>
   );
 };
+
+export const PortfolioGrid = ({ cards }) => (
+  <CardContainer>
+    {cards.map((card, index) => (
+      <PortfolioCard
+        key={index}
+        title={card.title}
+        image={card.image}
+        category={card.category}
+        onClick={card.onClick}
+      />
+    ))}
+  </CardContainer>
+);
 
 export default PortfolioCard;
