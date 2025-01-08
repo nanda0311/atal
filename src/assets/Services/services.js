@@ -16,5 +16,10 @@ import Picture15 from './Picture15.png';
 import Picture16 from './Picture16.png';
 import Picture17 from './Picture17.png';
 import Picture18 from './Picture18.png';
+import Pic1 from './1.jpg';
+import Pic2 from './2.jpg';
+import Pic3 from './3.png';
+import Pic4 from './4.jpg';
+import Pic5 from './5.jpg';
 
-export {Picture1,Picture2,Picture3,Picture4,Picture5,Picture6,Picture7,Picture8,Picture9,Picture10,Picture11,Picture12,Picture13,Picture14,Picture15,Picture16,Picture17,Picture18};
+export {Picture1,Picture2,Picture3,Picture4,Picture5,Picture6,Picture7,Picture8,Picture9,Picture10,Picture11,Picture12,Picture13,Picture14,Picture15,Picture16,Picture17,Picture18,Pic1,Pic2,Pic3,Pic4,Pic5};
