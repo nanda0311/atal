@@ -205,3 +205,119 @@
   background: #e0e0e0;
   color: #f06a2c; /* Change text color when hovering */
 }
+/* General Mobile Styles */
+@media (max-width: 768px) {
+  .events-page {
+    padding: 10px; /* Reduce padding */
+    gap: 15px; /* Decrease spacing */
+  }
+
+  /* Tabs */
+  .tabs {
+    flex-direction: column; /* Stack tabs vertically */
+    gap: 10px; /* Reduce gap between tabs */
+  }
+
+  .tab-button {
+    font-size: 14px; /* Reduce font size for buttons */
+    padding: 8px 15px; /* Adjust padding */
+  }
+
+  /* Content Container */
+  .content-container {
+    flex-direction: column; /* Stack calendar and events */
+    gap: 20px; /* Add space between sections */
+    align-items: center; /* Center content */
+  }
+
+  /* Calendar Container */
+  .calendar-container {
+    max-width: 100%; /* Allow full width */
+    width: 100%; /* Fill available space */
+  }
+
+  /* Events Container */
+  .events-container {
+    justify-content: center; /* Center align event cards */
+    gap: 15px; /* Reduce gap between cards */
+  }
+
+  /* Event Card */
+  .event-card {
+    width: 100%; /* Take full width */
+    max-width: 300px; /* Limit the maximum width */
+  }
+
+  .event-card img {
+    height: 120px; /* Adjust image height */
+  }
+
+  .event-date {
+    font-size: 12px; /* Reduce font size */
+  }
+
+  .event-card h3 {
+    font-size: 14px; /* Reduce font size */
+  }
+
+  /* Button Group */
+  .button-group {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 10px; /* Add space between buttons */
+    width: 100%; /* Full width */
+  }
+
+  .apply-button,
+  .clear-button {
+    font-size: 14px; /* Adjust font size */
+    padding: 8px 10px; /* Adjust padding */
+  }
+
+  /* React Calendar Navigation */
+  .react-calendar__navigation {
+    font-size: 14px; /* Reduce font size */
+    padding: 8px; /* Adjust padding */
+  }
+
+  .react-calendar__navigation button {
+    font-size: 12px; /* Smaller font for buttons */
+  }
+}
+
+/* Extra Small Devices (max-width: 480px) */
+@media (max-width: 480px) {
+  .tabs {
+    gap: 5px; /* Minimize gap between tabs */
+  }
+
+  .tab-button {
+    font-size: 12px; /* Smaller font size */
+    padding: 6px 10px; /* Smaller padding */
+  }
+
+  .calendar-container {
+    padding: 10px; /* Adjust padding */
+  }
+
+  .event-card {
+    padding: 10px; /* Adjust card padding */
+  }
+
+  .event-card img {
+    height: 100px; /* Further reduce image height */
+  }
+
+  .apply-button,
+  .clear-button {
+    font-size: 12px; /* Smaller font for buttons */
+    padding: 6px 8px; /* Smaller padding */
+  }
+
+  .react-calendar__navigation {
+    font-size: 12px; /* Smaller font */
+  }
+
+  .react-calendar__navigation button {
+    font-size: 10px; /* Smallest font for navigation buttons */
+  }
+}

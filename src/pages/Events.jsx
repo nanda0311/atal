@@ -10,31 +10,31 @@ const Events = () => {
 
   const events = [
     {
-      date: "2024-12-05",
+      date: "2025-01-11",
       title: "Tech Conference 2024",
       time: "10:00 AM",
       poster: "src/assets/logos/Eventsp1.jpg",
     },
     {
-      date: "2024-12-10",
+      date: "2025-01-10",
       title: "Art Exhibition",
       time: "3:00 PM",
       poster: "src/assets/logos/Events-2.jpg",
     },
     {
-      date: "2024-12-15",
+      date: "2025-01-15",
       title: "Music Fest",
       time: "7:00 PM",
       poster: "src/assets/logos/Eventsp3.jpg",
     },
     {
-      date: "2024-12-18",
+      date: "2025-01-07",
       title: "Dance Fest",
       time: "8:00 PM",
       poster: "src/assets/logos/Eventsp4.jpg",
     },
     {
-      date: "2024-12-20",
+      date: "2025-01-20",
       title: "Tech Fest",
       time: "9:00 PM",
       poster: "src/assets/logos/Eventsp5.jpg",
