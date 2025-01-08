@@ -6,19 +6,26 @@ const Container = styled.div`
   padding: 1.5rem;
 `;
 
+
 const ImageContainer = styled.div`
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 16rem;
+  width: 16rem; /* Make sure it's a square to form a perfect circle */
   margin-bottom: 1.5rem;
-  border-radius: 0.5rem;
+  border-radius: 50%; /* Circular shape */
   overflow: hidden;
+  
 `;
 
 const Image = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: ;
+  object-fit: cover; /* Ensure the image covers the container */
 `;
+
 
 const CategoryBadge = styled.span`
   position: absolute;
