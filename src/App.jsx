@@ -44,7 +44,7 @@ function App() {
         <Route path="/admin/tenders" element={<TendersAdmin />} />
         <Route path="/academicPartners" element={<Academic />} />
         <Route path="/cooperativePartners" element={<Cooperative />} />
-        <Route path="/investmentPartners" element={<Investment />} />
+        <Route path="/investmentPartner" element={<Investment />} />
         <Route path="/ipSupporters" element={<IP />} />
         <Route path="/networkingPartners" element={<Network />} />
         <Route path="*" element={<div>404 - Page Not Found</div>} />
