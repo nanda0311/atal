@@ -13,7 +13,7 @@ export const Focus = () => {
             <img
               src={iot}
               alt="IoT"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
             />
           </div>
           <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition">
@@ -25,7 +25,7 @@ export const Focus = () => {
             <img
               src={uav}
               alt="UAV"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
             />
           </div>
           <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition">
@@ -37,7 +37,7 @@ export const Focus = () => {
             <img
               src={emb}
               alt="Embedded"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-contain"
             />
           </div>
           <button className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition">
