@@ -1,59 +1,60 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const CardContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap; /* Allows multiple cards to wrap */
-  gap: 1.5rem; /* Adjusts the space between cards */
-  margin: 2rem 0; /* Adds some space around the container */
-`;
-
 const Card = styled.div`
   background-color: white;
-  border-radius: 0.75rem;
+  border-radius: 12px;
   height: 100%;
-  width: 300px; /* Fixed width for consistent card sizes */
+  width: 320px;
   display: flex;
   flex-direction: column;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+
   &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
   }
 `;
 
 const ImageContainer = styled.div`
-  position: relative;
-  height: 12rem;
-  width: 12rem; /* Ensure the container is square */
-  overflow: hidden;
-  border-radius: 50%; /* Makes the container circular */
-  margin: 1rem auto; /* Centers the circle within the card */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  margin: 1rem auto;
+  padding: 1rem; /* Add padding for spacing around the image */
+  border-radius: 50%; /* Keeps the logo circular, if needed */
+  width: auto;
+  height: auto;
+  max-width: 240px; /* Increase the max width */
+  max-height: 240px; /* Increase the max height */
 `;
 
 const Image = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the image fills the circular frame */
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Maintains aspect ratio without cutting off the logo */
 `;
+
 
 const CategoryBadge = styled.span`
   position: absolute;
   top: 1rem;
   right: 1rem;
-  padding: 0.25rem 1rem;
+  padding: 0.4rem 1rem;
   background-color: #2563eb;
   color: white;
   font-size: 0.875rem;
   border-radius: 9999px;
+  z-index: 2;
 `;
 
 const Content = styled.div`
   padding: 1.5rem;
+  text-align: center;
 `;
 
 const Title = styled.h3`
@@ -66,9 +67,9 @@ const Title = styled.h3`
 const PortfolioCard = ({ title, image, category, onClick }) => {
   return (
     <Card onClick={onClick}>
+      <CategoryBadge>{category}</CategoryBadge>
       <ImageContainer>
         <Image src={image} alt={title} />
-        <CategoryBadge>{category}</CategoryBadge>
       </ImageContainer>
       <Content>
         <Title>{title}</Title>
@@ -76,19 +77,5 @@ const PortfolioCard = ({ title, image, category, onClick }) => {
     </Card>
   );
 };
-
-export const PortfolioGrid = ({ cards }) => (
-  <CardContainer>
-    {cards.map((card, index) => (
-      <PortfolioCard
-        key={index}
-        title={card.title}
-        image={card.image}
-        category={card.category}
-        onClick={card.onClick}
-      />
-    ))}
-  </CardContainer>
-);
 
 export default PortfolioCard;

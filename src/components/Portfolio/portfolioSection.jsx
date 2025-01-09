@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import { portfolioData } from './data/portfolioData'; 
+import { portfolioData } from './data/portfolioData';
 import PortfolioFilters from './portfolioFilters';
 import PortfolioCard from './portfolioCard';
 import Modal from './UI/Modal';
 import StartupDetails from './StartupDetail';
+import Pagination from './Pagination'; // New component for pagination
 
 const categories = ['All', 'Ongoing', 'Graduated', 'SISFS'];
 
 const Section = styled.section`
   padding: 4rem 1rem;
-  background-color: #f9fafb;
+  background: linear-gradient(180deg, #eef2f7 0%, #ffffff 100%);
 `;
 
 const Container = styled.div`
@@ -24,9 +25,9 @@ const Header = styled.div`
 `;
 
 const Title = styled.h2`
-  font-size: 1.875rem;
+  font-size: 2rem;
   font-weight: bold;
-  color: #111827;
+  color: #1e3a8a; /* Dark Blue */
   margin-bottom: 1rem;
 `;
 
@@ -40,26 +41,38 @@ const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 2rem;
-  
+
   @media (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
   }
-  
+
   @media (min-width: 1024px) {
     grid-template-columns: repeat(3, 1fr);
   }
 `;
 
+const ITEMS_PER_PAGE = 15; // Number of cards per page
+
 const PortfolioSection = () => {
   const [activeCategory, setActiveCategory] = useState('All');
   const [selectedStartup, setSelectedStartup] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
 
   const filteredData = activeCategory === 'All'
     ? portfolioData
     : portfolioData.filter(item => item.category === activeCategory);
 
+  const totalPages = Math.ceil(filteredData.length / ITEMS_PER_PAGE);
+  const startIdx = (currentPage - 1) * ITEMS_PER_PAGE;
+  const endIdx = startIdx + ITEMS_PER_PAGE;
+  const currentPageData = filteredData.slice(startIdx, endIdx);
+
   const handleStartupClick = (startup) => {
     setSelectedStartup(startup);
+  };
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
   };
 
   return (
@@ -68,28 +81,37 @@ const PortfolioSection = () => {
         <Header>
           <Title>Our Portfolio</Title>
           <Subtitle>
-            Discover our diverse portfolio of innovative startups and success stories
+            Discover our diverse portfolio of innovative startups and success stories.
           </Subtitle>
         </Header>
-        
+
         <PortfolioFilters
           categories={categories}
           activeCategory={activeCategory}
-          onCategoryChange={setActiveCategory}
+          onCategoryChange={(category) => {
+            setActiveCategory(category);
+            setCurrentPage(1); // Reset to the first page when category changes
+          }}
         />
 
         <Grid>
-          {filteredData.map(item => (
-            <PortfolioCard 
-              key={item.id} 
-              {...item} 
+          {currentPageData.map(item => (
+            <PortfolioCard
+              key={item.id}
+              {...item}
               onClick={() => handleStartupClick(item)}
             />
           ))}
         </Grid>
+
+        <Pagination
+          totalPages={totalPages}
+          currentPage={currentPage}
+          onPageChange={handlePageChange}
+        />
       </Container>
 
-      <Modal 
+      <Modal
         isOpen={!!selectedStartup}
         onClose={() => setSelectedStartup(null)}
       >
