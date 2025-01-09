@@ -1,16 +1,12 @@
 import React from "react";
-import Carousel from "../components/Homepage/CarouselSection";
 import Stats from "../components/Homepage/Stat";
-import { Player } from "@lottiefiles/react-lottie-player";
-import iot from "../assets/Homepage/iot.json";
-import uav from "../assets/Homepage/uav.json";
-import edm from "../assets/Homepage/edm.json";
+
 import styled, { keyframes, css } from "styled-components";
 import SocialMedia from "../components/Homepage/SocialMedia";
 import Partner from "../components/Homepage/Partner";
-import { About } from "../components/Homepage/About";
 import Landing from "../components/Homepage/Landing";
 import AboutNew from "../components/Homepage/AboutNew";
+import Focus from '../components/Homepage/Focus';
 
 const Home = () => {
   return (
@@ -23,38 +19,8 @@ const Home = () => {
       {/*   about */}
       {/*<About />*/}
       <AboutNew />
+      <Focus/>
 
-      {/* foucsArea */}
-      <AnimationsContainer>
-        <Heading>Focus Area</Heading>
-        <Box>
-          <h1>EDM</h1>
-          <Player
-            autoplay
-            loop
-            src={edm}
-            style={{ height: "300px", width: "300px" }}
-          />
-        </Box>
-        <Box>
-          <h1>UAV</h1>
-          <Player
-            autoplay
-            loop
-            src={uav}
-            style={{ height: "300px", width: "300px" }}
-          />
-        </Box>
-        <Box>
-          <h1>IOT</h1>
-          <Player
-            autoplay
-            loop
-            src={iot}
-            style={{ height: "300px", width: "300px" }}
-          />
-        </Box>
-      </AnimationsContainer>
 
       {/* SocialMedia */}
       <SocialMedia />

@@ -11,6 +11,9 @@ import Back from './back.jpg';
 import Home1 from "./home1.jpg";
 import Home2 from "./home2.jpg";
 import Home3 from "./home3.jpg";
+import emb from "./emb.jpg";
+import iot from "./iot.jpg";
+import uav from "./uav.jpg";
 export { dummy1, dummy2, dummy3,dummy4,dummy5,dummy6,dummy7,About,Rocket ,Back,Home1,
     Home2,
-    Home3,};
+    Home3,iot,uav,emb};
