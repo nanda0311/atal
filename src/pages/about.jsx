@@ -76,33 +76,30 @@ const About = () => {
                   <TextOverlay>About AIC-PECF</TextOverlay>
               </ImageWrapper>
           </Head>
-          <Body>
-              <BodyContent ref={bodyContentRef}>
-                  <p>
-                      Atal Incubation Centre Pondicherry Engineering College Foundation (AIC-PECF) is fully supported and funded by the Atal Innovation Mission (AIM), Niti Aayog, and Government of India. AIC-PECF was initiated to provide a platform to assist and enable young entrepreneurs to initiate start-ups for the commercial exploitation of technologies developed by them. AIC-PECF also enables the budding entrepreneurs to showcase and test their abilities to run a start-up business in the areas of Electronics Design and Manufacturing (EDM), Internet of Things (IoT), and Unmanned Aerial Vehicle (UAV).
-                  </p>
-              </BodyContent>
-          </Body>
+            <p class="max-w-5xl  font-serif mx-auto text-lg">
+                Atal Incubation Centre Pondicherry Engineering College Foundation (AIC-PECF) is fully supported and funded by the Atal Innovation Mission (AIM), Niti Aayog, and Government of India. AIC-PECF was initiated to provide a platform to assist and enable young entrepreneurs to initiate start-ups for the commercial exploitation of technologies developed by them. AIC-PECF also enables the budding entrepreneurs to showcase and test their abilities to run a start-up business in the areas of Electronics Design and Manufacturing (EDM), Internet of Things (IoT), and Unmanned Aerial Vehicle (UAV).
+            </p>
+
           <VisionMission>
               <VisionMissionContent>
                   <Lottie
                         loop
                         animationData={vImage}
                         play
-                        style={{ width: '70%', height: '250px' }}
+                        style={{ width: '80%', height: '250px' }}
                   />
               </VisionMissionContent>
               <VisionMissionContent>
-                  <h2>Our Vision</h2>
-                  <p>
+              <p class="text-2xl font-bold mt-10 ">Our Vision</p>
+                  <p class=" text-lg">
                       To provide world-class incubation support for Start-ups that promotes technological innovations to improve people's lives, generate employment, and drive the sustainable growth of the Indian economy.
                   </p>  
               </VisionMissionContent>
           </VisionMission>
           <VisionMission>
               <VisionMissionContent>
-                  <h2>Our Mission</h2>
-                  <p>
+                <p class="text-2xl font-bold ">Our Mission</p>
+                  <p class=" text-lg">
                       To facilitate and enable innovators to pursue their own ideas and convert them into successful ventures. To build a holistic partnership among stakeholders and create a sustainable start-up ecosystem. To promote and inculcate the habit of innovation among the student community and thereby foster future start-ups.
                   </p>
               </VisionMissionContent>
@@ -110,14 +107,14 @@ const About = () => {
                         loop
                         animationData={mImage}
                         play
-                        style={{ width: '70%', height: '250px' }}
+                        style={{ width: '80%', height: '250px' }}
                   />
               </VisionMissionContent>
           </VisionMission>
           <Activities>
               <ActivitiesContent>
-                  <h1>Activities of AIC-PECF</h1>
-                  <p>
+              <p class="text-2xl font-bold text-center">Activities of PECF</p>
+                  <p class=" text-lg mt-1">
                       Entrepreneurship and innovation are critical for the growth of any economy, in an increasingly competitive world. They become even more critical for India as its demographic dividend can only be realized with rapid creation of employment and income generation opportunities. Global experience shows that, apart from creating wealth and boosting the economy, new businesses also create disproportionately more jobs than established ones. AIC-PECF actively creates an environment for the young innovators to test their business ideas with minimal risks.
                   </p>
               </ActivitiesContent>
@@ -147,8 +144,8 @@ const About = () => {
                   </Slider>
               </CarouselSection>
           </Activities>
+          <p class="text-2xl font-bold text-center">Infrastructure</p>
           <Infrastructure onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-              <h3>INFRASTRUCTURE</h3>
               <StyledVideo ref={videoRef} muted={false}>
                   <source src={Video1} type="video/mp4" />
                   Your browser does not support the video.
@@ -179,7 +176,6 @@ const zoomIn = keyframes`
 `;
 
 const AboutPage = styled.div`
-    text-align: center;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -196,7 +192,7 @@ const Head = styled.div`
 const ImageWrapper = styled.div`
     position: relative;
     width: 100%;
-    max-width: 768px;
+    max-width: 1024px;
     margin: 0 auto;
     border-radius: 10px;
 
@@ -242,7 +238,7 @@ const TextOverlay = styled.div`
     animation: ${fadeIn} 2s ease-in;
 `;
 
-const Body = styled.div`
+/*const Body = styled.div`
     margin-top: 50px;
     width: 100%;
     max-width: 768px;
@@ -255,11 +251,10 @@ const Body = styled.div`
         padding: 5px;
         font-size: 15px;
     }
-`;
+`;*/
 
-const BodyContent = styled.div`
+/*const BodyContent = styled.div`
     max-width: 768px;
-    padding: 30px;
     color: black;
     border-radius: 15px;
     opacity: 0;
@@ -269,14 +264,14 @@ const BodyContent = styled.div`
         padding: 15px;
         border-radius: 5px;
     }
-`;
+`;*/
 
 const VisionMission = styled.div`
     display: flex;
     justify-content: space-between;
-    margin-top: 50px;
+    margin-top: 5px;
     width: 100%;
-    max-width: 768px;
+    max-width: 1024px;
     margin: 0 auto;
     padding: 10px;
     font-size: 22px;
@@ -317,7 +312,7 @@ const VisionMissionImage = styled.img`
 const Activities = styled.div`
     margin-top: 50px;
     width: 100%;
-    max-width: 768px;
+    max-width: 1024px;
     margin: 0 auto;
     padding: 10px;
     color: #333;
@@ -346,10 +341,10 @@ const ActivitiesContent = styled.div`
 const CarouselSection = styled.section`
     width: 100%;
     overflow: hidden;
-
+    border-radius: 10px;
     .slick-slide img {
         width: 100%;
-        height: 100vh;
+        height: 80vh;
 
         @media (max-width: 768px) {
             height: 40vh;
@@ -373,9 +368,9 @@ const CustomDots = styled.ul`
 `;
 
 const Infrastructure = styled.div`
-    margin-top: 50px;
+    margin-top: 5px;
     width: 100%;
-    max-width: 768px;
+    max-width: 1024px;
     margin: 0 auto;
     padding: 10px;
     color: #333;
@@ -388,8 +383,8 @@ const Infrastructure = styled.div`
 `;
 
 const StyledVideo = styled.video`
-    height: 400px;
-    max-width: 768px;
+    height:500px;
+    width: 1024px;
 
     @media (max-width: 768px) {
         width: 320px;
