@@ -56,7 +56,7 @@ const Navbar_menu = [
         link: "/cooperativePartners",
       },
       {
-        title: "IP Supporterns",
+        title: "IP Supporters",
         link: "/ipSupporters",
       },
       {
