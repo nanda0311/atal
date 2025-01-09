@@ -58,9 +58,49 @@ function App() {
     { name: 'DI Corporation', logo: di }
   ];
 
+  const ipSupporters = [
+    { name: 'Facebook Research', logo: 'https://via.placeholder.com/150?text=FB' },
+    { name: 'Google AI', logo: 'https://via.placeholder.com/150?text=Google' },
+    { name: 'Microsoft Labs', logo: 'https://via.placeholder.com/150?text=MS' },
+    { name: 'OpenAI', logo: 'https://via.placeholder.com/150?text=OpenAI' }
+  ];
+
+  const networkPartners = [
+    { name: 'AWS', logo: 'https://via.placeholder.com/150?text=AWS' },
+    { name: 'IBM Watson', logo: 'https://via.placeholder.com/150?text=IBM' },
+    { name: 'NVIDIA AI', logo: 'https://via.placeholder.com/150?text=NVIDIA' },
+    { name: 'Intel Labs', logo: 'https://via.placeholder.com/150?text=Intel' }
+  ];
+
+  const investmentPartners = [
+    { name: 'Sequoia Capital', logo: 'https://via.placeholder.com/150?text=Sequoia' },
+    { name: 'Andreessen Horowitz', logo: 'https://via.placeholder.com/150?text=A16Z' },
+    { name: 'SoftBank Vision Fund', logo: 'https://via.placeholder.com/150?text=SoftBank' },
+    { name: 'Accel Partners', logo: 'https://via.placeholder.com/150?text=Accel' }
+  ];
+
   const renderPartners = () => {
-    const partners =
-      activeSection === 'Academic' ? academicPartners : activeSection === 'Co-operative' ? corporatePartners : [];
+    let partners;
+    switch (activeSection) {
+      case 'Academic':
+        partners = academicPartners;
+        break;
+      case 'Co-operative':
+        partners = corporatePartners;
+        break;
+      case 'IP Supporters':
+        partners = ipSupporters;
+        break;
+      case 'Network':
+        partners = networkPartners;
+        break;
+      case 'Investment':
+        partners = investmentPartners;
+        break;
+      default:
+        partners = [];
+    }
+
     return (
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {partners.map((partner, index) => (
@@ -107,7 +147,7 @@ function App() {
       {/* Partners Section */}
       <div className="text-center mb-8">
         <h2 className="text-3xl font-bold text-gray-800 mb-8">
-          {activeSection === 'Academic' ? 'Our Academic Partners' : 'Our Corporate Partners'}
+          {activeSection} Partners
         </h2>
         {renderPartners()}
       </div>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css"; // Import calendar styles
 import "./Events.css"; // Add your custom styles here
@@ -7,6 +7,7 @@ const Events = () => {
   const [selectedDates, setSelectedDates] = useState([]); // Array to hold multiple selected dates
   const [filteredDates, setFilteredDates] = useState([]); // Dates to filter events
   const [activeTab, setActiveTab] = useState("Upcoming Events"); // Track active tab
+  const [observed, setObserved] = useState(false); // To trigger the observer only once
 
   const events = [
     {
@@ -69,6 +70,34 @@ const Events = () => {
   const displayedEvents = filteredDates.length
     ? events.filter((event) => filteredDates.includes(event.date))
     : events; // Show all events if no dates are selected
+
+  // IntersectionObserver to trigger animation when tiles are in view
+  const observeTiles = () => {
+    const tiles = document.querySelectorAll('.pedagogy-tile');
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible'); // Add visible class when the tile is in view
+          }
+        });
+      },
+      {
+        threshold: 0.3, // Trigger when 30% of the tile is in view
+      }
+    );
+
+    tiles.forEach((tile) => {
+      observer.observe(tile);
+    });
+  };
+
+  useEffect(() => {
+    if (!observed) {
+      observeTiles();
+      setObserved(true); // Set observed to true to avoid multiple observer initializations
+    }
+  }, [observed]);
 
   return (
     <div className="events-page">
@@ -182,9 +211,34 @@ const Events = () => {
         </div>
       </div>
     </div>
+
+    {/* Program Pedagogy Section */}
+    <div className="program-pedagogy">
+      <h3>Program Pedagogy</h3>
+      <div className="pedagogy-container">
+        {[
+          { logo: "src/assets/logos/bootcamp.png", name: "Boot Camp" },
+          { logo: "src/assets/logos/hackathon.png", name: "Hackathon" },
+          { logo: "src/assets/logos/preinc.png", name: "Pre-Incubation" },
+          { logo: "src/assets/logos/startup.png", name: "Startup Creation" },
+          { logo: "src/assets/logos/outreach1.png", name: "Outreach" },
+          { logo: "src/assets/logos/idea.png", name: "Ideathon" },
+          { logo: "src/assets/logos/demo.png", name: "Demo Day" },
+          { logo: "src/assets/logos/pitch.png", name: "Pitch Fest" },
+        ].map((tile, index) => (
+          <div
+            key={index}
+            className="pedagogy-tile"
+            style={{ animationDelay: `${index * 0.3}s` }}
+          >
+            <img src={tile.logo} alt={tile.name} className="pedagogy-icon" />
+            <h4>{tile.name}</h4>
+          </div>
+        ))}
+      </div>
+    </div>
   </div>
 )}
-
 
       {activeTab === "Register" && (
         <div className="register-tab">
