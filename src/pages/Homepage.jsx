@@ -7,7 +7,7 @@ import Partner from "../components/Homepage/Partner";
 import Landing from "../components/Homepage/Landing";
 import AboutNew from "../components/Homepage/AboutNew";
 import Focus from '../components/Homepage/Focus';
-
+import Stat1 from "../components/Homepage/Stat1";
 const Home = () => {
   return (
     <Container>
@@ -20,6 +20,7 @@ const Home = () => {
       {/*<About />*/}
       <AboutNew />
       <Focus/>
+      <Stat1/>
 
 
       {/* SocialMedia */}

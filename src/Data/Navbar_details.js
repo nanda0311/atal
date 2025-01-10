@@ -45,7 +45,7 @@ const Navbar_menu = [
   {
     Title: "Partners",
     link: "/partners",
-    drop: "active",
+    drop: null,
     dropList: [
       {
         title: "Academic Partners",
