@@ -1,6 +1,6 @@
 // logos.js
 import ptuLogo from "./ptu-logo.png";
-import Aim from "./AIM.png";
+import Aim from "./AIM.webp";
 import Aic from "./AIC.png";
 import downArrow from "./downArrow.png";
 

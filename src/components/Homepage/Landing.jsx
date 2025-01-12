@@ -103,7 +103,7 @@ const Landing = () => {
       </div>
 
       {/* Who Am I Section */}
-      <div className="bg-gray-100 py-10 px-10 mt-40 pt-10">
+      <div className="bg-gray-100 py-10 px-10 mt-40 pt-24">
         <div className="flex flex-wrap items-center justify-center gap-8">
           {/* Who Am I? Dropdown */}
           <div className="relative">

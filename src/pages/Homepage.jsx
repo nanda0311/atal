@@ -8,6 +8,7 @@ import Landing from "../components/Homepage/Landing";
 import AboutNew from "../components/Homepage/AboutNew";
 import Focus from '../components/Homepage/Focus';
 import Stat1 from "../components/Homepage/Stat1";
+import Testimonials from "../components/Homepage/Testimonials";
 const Home = () => {
   return (
     <Container>
@@ -16,6 +17,7 @@ const Home = () => {
       <Carousel />
     */}
       <Landing />
+      <Testimonials/>
       {/*   about */}
       {/*<About />*/}
       <AboutNew />
