@@ -23,6 +23,7 @@ import Investment from "./components/Partners/Investment.jsx";
 import IP from "./components/Partners/IPsupport.jsx";
 import Network from "./components/Partners/Network.jsx";
 import NavbarOG from "./layouts/NavbarOG.jsx";
+import Programs from "./pages/Programs.jsx";
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/partners" element={<Partners />} />
+        <Route path="/programs" element={<Programs />} />
         <Route path="/studentProject" element={<Services />} />
         <Route path="/startupDetail" element={<Portfolio />} />
         <Route path="/events" element={<Events />} />

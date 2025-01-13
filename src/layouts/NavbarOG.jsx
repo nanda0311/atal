@@ -55,8 +55,8 @@ const NavbarOG = () => {
         <div
           className={
             !isOpen
-              ? "fixed z-10 w-full top-0 h-screen bg-slate-950 transition-all backdrop-blur-lg ease-in-out bg-opacity-40 "
-              : "fixed z-10 w-full hidden -left-full top-0 h-screen bg-slate-950 transition-all backdrop-blur-lg ease-in-out bg-opacity-40 "
+              ? "fixed z-10 w-full top-0 h-screen  bg-slate-950 transition duration-1000  backdrop-blur-lg bg-opacity-40 "
+              : "fixed z-10 w-full top-0 hidden -left-[100%] h-screen bg-slate-950 transition duration-1000  backdrop-blur-lg bg-opacity-40 "
           }
           onClick={toggleMenue}
         ></div>
@@ -74,8 +74,8 @@ const NavbarOG = () => {
             <ul
               className={
                 isOpen
-                  ? " flex-col  absolute justify-evenly text-2xl top-4 space-y-7  p-7 -left-full z-20 transition-all  menue"
-                  : "flex-col text-white absolute justify-evenly text-2xl top-4 space-y-4  p-7 left-0 z-20 transition-all  menue"
+                  ? " flex-col text-white absolute justify-evenly text-2xl top-4 space-y-60 opacity-0 transition-all  p-7 -left-full z-20  "
+                  : "flex-col text-white absolute justify-evenly text-2xl top-4 space-y-4  p-7 left-0 z-20 transition-all "
               }
             >
               <div
@@ -93,91 +93,19 @@ const NavbarOG = () => {
                 <NavLink to="/">Home</NavLink>
               </li>
               <hr />
-              <li className="flex items-center  space-x-6">
-                <NavLink to="/" onClick={hideAll}>
+              <li>
+                <NavLink to="/programs" onClick={hideAll}>
                   Programs
                 </NavLink>
-                <div onClick={() => setIsProgramsOpen(!isProgramsOpen)}>
-                  <FaAngleDown
-                    className={!isProgramsOpen ? "block" : "hidden"}
-                  />
-                  <FaAngleRight
-                    className={isProgramsOpen ? "block" : "hidden"}
-                  />
-                </div>
               </li>
-              <div
-                onClick={hideAll}
-                className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                  isProgramsOpen
-                    ? "max-h-[300px] opacity-100 ml-4"
-                    : "max-h-0 opacity-0"
-                }`}
-              >
-                <li>
-                  <NavLink to="/academicPartners">Pre-Incubate</NavLink>
-                  <hr />
-                </li>
-                <li>
-                  <NavLink to="/cooperativePartners">Incubate</NavLink>
-                  <hr />
-                </li>
-                <li>
-                  <NavLink to="/ipSupporters">Incubation</NavLink>
-                  <hr />
-                </li>
-                <li>
-                  <NavLink to="/networkingPartners">Incubation</NavLink>
-                  <hr />
-                </li>
-              </div>
+              
               <hr />
-              <li className="flex items-center  space-x-6">
+              <li >
                 <NavLink onClick={hideAll} to="/partners">
                   Partners
                 </NavLink>
-                <div onClick={() => setIsPartnersOpen(!isPartnersOpen)}>
-                  <FaAngleDown
-                    className={!isPartnersOpen ? "block" : "hidden"}
-                  />
-                  <FaAngleRight
-                    className={isPartnersOpen ? "block" : "hidden"}
-                  />
-                </div>
               </li>
-              <div
-                onClick={hideAll}
-                className={`transition-all duration-300 ease-in-out overflow-hidden ${
-                  isPartnersOpen
-                    ? "max-h-[300px] opacity-100 ml-4"
-                    : "max-h-0 opacity-0"
-                }`}
-              >
-                <li>
-                  <NavLink to="/academicPartners">Academic Partners</NavLink>
-                  <hr />
-                </li>
-                <li>
-                  <NavLink to="/cooperativePartners">
-                    Cooperative Partners
-                  </NavLink>
-                  <hr />
-                </li>
-                <li>
-                  <NavLink to="/ipSupporters">Ip Supporters</NavLink>
-                  <hr />
-                </li>
-                <li>
-                  <NavLink to="/networkingPartners">
-                    Networking Partners
-                  </NavLink>
-                  <hr />
-                </li>
-                <li>
-                  <NavLink to="/investmentPartner">Investment Partner</NavLink>
-                  <hr />
-                </li>
-              </div>
+              
               <hr />
               <li>
                 <NavLink onClick={hideAll} to="/events">
