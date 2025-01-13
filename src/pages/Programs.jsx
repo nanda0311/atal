@@ -99,25 +99,6 @@ function Programs() {
     { name: "Intel Labs", logo: "https://via.placeholder.com/150?text=Intel" },
   ];
 
-  const investmentPartners = [
-    {
-      name: "Sequoia Capital",
-      logo: "https://via.placeholder.com/150?text=Sequoia",
-    },
-    {
-      name: "Andreessen Horowitz",
-      logo: "https://via.placeholder.com/150?text=A16Z",
-    },
-    {
-      name: "SoftBank Vision Fund",
-      logo: "https://via.placeholder.com/150?text=SoftBank",
-    },
-    {
-      name: "Accel Partners",
-      logo: "https://via.placeholder.com/150?text=Accel",
-    },
-  ];
-
   const renderPartners = () => {
     let partners;
     switch (activeSection) {
@@ -137,7 +118,7 @@ function Programs() {
         partners = [];
     }
 
-    return (
+    return partners.length > 0 ? (
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {partners.map((partner, index) => (
           <div
@@ -159,13 +140,15 @@ function Programs() {
           </div>
         ))}
       </div>
+    ) : (
+      <p className="text-center text-gray-500">No partners available.</p>
     );
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-gray-100 p-8">
+    <div className="flex flex-col min-h-screen bg-gradient-to-b from-gray-50 to-gray-100">
       {/* Navigation Boxes */}
-      <div className="flex flex-wrap justify-center gap-4 mb-12">
+      <div className="flex flex-wrap justify-center gap-4 p-6">
         {programsSections.map((section) => (
           <button
             key={section.name}
@@ -183,11 +166,11 @@ function Programs() {
       </div>
 
       {/* Partners Section */}
-      <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-gray-800 mb-8">
+      <div className="flex-grow flex flex-col items-center justify-center">
+        <h2 className="text-3xl font-bold text-gray-800 mb-6">
           {activeSection} Partners
         </h2>
-        {renderPartners()}
+        <div className="w-full max-w-7xl px-6">{renderPartners()}</div>
       </div>
     </div>
   );
