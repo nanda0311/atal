@@ -49,7 +49,7 @@ const Testimonials = () => {
   return (
     <div className="w-[85%] mx-auto mb-20">
       <div className="max-w-fit ml-[-30px] mt-10">
-        <h2 className="text-2xl font-semibold">HEAR FROM OUR FOUNDERS</h2>
+        <h2 className="text-2xl font-semibold ml-2 md:ml">HEAR FROM OUR FOUNDERS</h2>
         {/* Border bottom */}
         <div
           id="border-bottom"
@@ -61,7 +61,7 @@ const Testimonials = () => {
       <div className="relative mt-10">
         <div className="flex flex-col md:flex-row justify-between items-center gap-10">
           {/* Photo Section */}
-          <div className="rounded-full overflow-hidden bg-customBlue w-80 h-80">
+          <div className="rounded-full overflow-hidden bg-customBlue w-40 h-40  md:w-80 md:h-80">
             <img
               src={testimonials[currentSlide].photo}
               alt={`${testimonials[currentSlide].role}'s photo`}
@@ -71,18 +71,18 @@ const Testimonials = () => {
 
           {/* Message Section */}
           <div className="flex-col flex justify-between bg-slate-100 p-10 rounded-md w-full md:w-[50vw] relative">
-            <p className="text-xl text-justify">{testimonials[currentSlide].message}</p>
-            <div className="gap-5 text-center font-medium text-lg mt-4">
+            <p className="md:text-xl text-base text-justify">{testimonials[currentSlide].message}</p>
+            <div className="gap-5 text-center font-medium text-sm md:text-lg mt-4">
               <h4>{testimonials[currentSlide].name}</h4>
               <h4>{testimonials[currentSlide].company}</h4>
             </div>
             {/* Decorative Arrow */}
-            <div className="min-w-7 min-h-7 bg-slate-100 absolute top-[50%] -left-3 rotate-45"></div>
+            <div className="min-w-7 min-h-7 hidden md:block bg-slate-100 absolute top-[50%] -left-3 rotate-45"></div>
           </div>
         </div>
 
         {/* Navigation Buttons */}
-        <div className="absolute top-1/2 left-0 transform -translate-y-1/2 p-4">
+        <div className="absolute top-[220px] -left-4 md:top-1/2 md:left-0 transform -translate-y-1/2 p-4">
           <button
             className="bg-customBlue text-white p-2 rounded-full"
             onClick={prevSlide}
@@ -90,7 +90,7 @@ const Testimonials = () => {
             &lt;
           </button>
         </div>
-        <div className="absolute top-1/2 right-0 transform -translate-y-1/2 p-4">
+        <div className="absolute top-[220px] -right-4 md:top-1/2 md:right-0 transform -translate-y-1/2 p-4">
           <button
             className="bg-customBlue text-white p-2 rounded-full"
             onClick={nextSlide}

@@ -81,11 +81,11 @@ function stat1() {
       <h1 className="inline-block bg-[#12283c] text-white px-5 py-2.5 rounded-full font-bold mb-10">
         ECOSYSTEM IMPACT
       </h1>
-      <div className="relative flex justify-between items-start">
+      <div className="relative flex flex-wrap space-y-5 justify-evenly md:justify-between items-start">
         <div className="absolute top-[30px] left-[50px] right-[50px] border-t-2 border-dashed border-white -z-10"></div>
         {metrics.map((metric, index) => (
           <div key={index} className="flex flex-col items-center text-center w-[100px]">
-            <div className="w-[60px] h-[60px] bg-[#12283c] rounded-full flex items-center justify-center mb-5">
+            <div className="w-[60px] h-[60px] bg-[#12283c] rounded-full flex items-center justify-center md:mb-5">
               <div className="w-[30px] h-[30px] text-white">
                 {metric.icon}
               </div>
@@ -93,7 +93,7 @@ function stat1() {
             <div className="bg-[#12283c] px-4 py-1.5 font-bold text-white my-2.5">
               {metric.number}
             </div>
-            <div className="text-sm leading-tight max-w-[100px] text-black">
+            <div className="md:text-sm text-xs leading-tight max-w-[100px] text-black">
               {metric.label}
             </div>
           </div>

@@ -61,7 +61,7 @@ export const Partner = () => {
 
   return (
     <div className="partner-carousel" style={{ perspective: '1500px', paddingBottom: '50px' }}>
-      <h2 style={{ textAlign: 'center', marginBottom: '20px', color: '#333' }}>OUR PARTNERS</h2>
+      <h2 className='mt-10' style={{ textAlign: 'center', marginBottom: '20px', color: '#333' }}>OUR PARTNERS</h2>
       <Slider {...settings}>
         {logos.map((logo, index) => (
           <div key={index} style={{ transform: `rotateY(${index * 15}deg)`, transition: 'transform 0.5s', padding: '10px' }}>

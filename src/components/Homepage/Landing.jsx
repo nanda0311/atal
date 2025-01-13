@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Tilt } from "react-tilt";
 import { Home1, Home2, Home3 } from "../../assets/Homepage/images";
+import Image_Carousel from "./Image_Carousel";
 
 const Landing = () => {
   // State to track selected role, search query, and dropdown visibility
@@ -8,6 +9,8 @@ const Landing = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [dropdownOpen, setDropdownOpen] = useState(false); // Control dropdown visibility
   const [filteredActions, setFilteredActions] = useState([]); // Filtered actions based on search query
+
+  const image = [Home1,Home2,Home3]
 
   // Role-specific actions
   const roleActions = {
@@ -60,18 +63,22 @@ const Landing = () => {
   };
 
   return (
-    <div className="pb-20 min-h-screen">
+    <div className="md:pb-20 pb-10 md:min-h-screen">
       {/* Landing Section */}
-      <div className="absolute border-4 border-gray-300 rounded-full min-h-screen min-w-[1000px] -left-[700px] top-0 -z-10"></div>
-      <div className="absolute border-4 border-gray-300 rounded-full min-h-screen min-w-[1000px] -right-[700px] top-0 -z-10"></div>
+      <div className="fixed hidden border-4  md:absolute  border-gray-300 rounded-full min-h-screen min-w-[850px] md:min-w-[1000px] -left-[700px] top-0 -z-10"></div>
+      <div className=" fixed hidden md:absolute  border-4 border-gray-300 rounded-full min-h-screen  min-w-[850px]  md:min-w-[1000px] -right-[700px] top-0 -z-10"></div>
       <div className="mt- text-gray-700">
-        <h1 className="font-semibold text-6xl text-center title">
+        <h1 className="font-semibold text-4xl md:text-6xl text-center  title">
           Atal Incubation Center Pec Foundation
         </h1>
-        <h4 className="mt-4 text-xl text-center title">Puducherry technological University</h4>
+        <h4 className="mt-4 text-xl text-center title ">Puducherry technological University</h4>
       </div>
 
-      <div className="flex justify-center gap-16 px-32 mt-5" id="cards">
+      <div className="mt-10 ml-4 mr-4 flex md:hidden">
+        <Image_Carousel images={image} />
+      </div>
+
+      <div className="justify-center gap-16 px-32 mt-5 hidden md:flex" id="cards">
         <Tilt style={{ width: 1300 }}>
           <div className="w-full max-h-80 rounded-3xl bg-customBlue overflow-hidden shadow-2xl shadow-customBlue">
             <img
@@ -103,7 +110,7 @@ const Landing = () => {
       </div>
 
       {/* Who Am I Section */}
-      <div className="bg-gray-100 py-10 px-10 mt-40 pt-24">
+      <div className="bg-gray-100 py-10 px-10 mt-4 md:mt-40 md:pt-24">
         <div className="flex flex-wrap items-center justify-center gap-8">
           {/* Who Am I? Dropdown */}
           <div className="relative">
