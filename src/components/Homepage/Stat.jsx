@@ -2,15 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 import { useInView } from 'react-intersection-observer';
 import CountUp from 'react-countup';
-import Rocket from '../../assets/Homepage/rocket.gif';
-import Rockets from '../../assets/Homepage/rocketg.gif';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faRocket, faGraduationCap, faUsers, faDollarSign, faHandshake } from '@fortawesome/free-solid-svg-icons';
 
 const stats = [
-    { number: 67, description: "No. of Startups", icon: Rocket },
-    { number: 12, description: "Startups Graduated", icon: Rockets },
-    { number: 250, description: "Employment Generated", icon: "https://startupodisha.gov.in/wp-content/uploads/2021/07/Nodal-Agency.gif" },
-    { number: 92, description: "Corps Fund", icon: "https://startupodisha.gov.in/wp-content/uploads/2021/07/Seed-Funding-1.gif" },
-    { number: 92, description: "CSR Secured", icon: "https://startupodisha.gov.in/wp-content/uploads/2021/07/No-of-cells.gif" },
+    { number: 67, description: "No. of Startups", icon: faRocket },
+    { number: 12, description: "Startups Graduated", icon: faGraduationCap },
+    { number: 250, description: "Employment Generated", icon: faUsers },
+    { number: 92, description: "Corps Fund", icon: faDollarSign },
+    { number: 92, description: "CSR Secured", icon: faHandshake },
 ];
 
 const Wrapper = styled.div`
@@ -20,6 +20,7 @@ const Wrapper = styled.div`
     align-items: center;
     gap: 2rem;
     padding: 2rem;
+    background-color:#F5F5F5;
 `;
 
 const StatContainer = styled.div`
@@ -29,21 +30,21 @@ const StatContainer = styled.div`
     text-align: center;
 `;
 
-const StatImage = styled.img`
-    width: 3rem;
-    height: 3rem;
+const StatIcon = styled.div`
+    font-size: 3rem;
+    color: #3F6197;
     margin-bottom: 0.5rem;
 `;
 
 const StatNumber = styled.span`
     font-size: 2.5rem;
     font-weight: bold;
-    color: #3b82f6; /* Blue color */
+    color:#12283c ;
 `;
 
 const StatDescription = styled.span`
     font-size: 1.125rem;
-    color: #e11d48; /* Red color */
+    color: black; 
 `;
 
 const App = () => {
@@ -63,13 +64,15 @@ const App = () => {
 
 const StatItem = ({ number, description, icon }) => {
     const { ref, inView } = useInView({
-        triggerOnce: true, // Animation triggers only once
-        threshold: 0.5, // Triggers when 50% of the element is visible
+        triggerOnce: true,
+        threshold: 0.5,
     });
 
     return (
         <StatContainer ref={ref}>
-            <StatImage src={icon} alt={description} />
+            <StatIcon>
+                <FontAwesomeIcon icon={icon} />
+            </StatIcon>
             <StatNumber>
                 {inView ? <CountUp start={0} end={number} duration={2} /> : 0}
             </StatNumber>

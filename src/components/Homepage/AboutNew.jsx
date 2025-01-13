@@ -60,13 +60,13 @@ const AboutNew = () => {
               id="box-1"
               className="row-span-4 bg-customBlue flex flex-col justify-evenly items-center rounded-xl"
             >
-              <IoTelescope color="white" size={50} />
+              <BsCpuFill color="white" size={50} />
               <div className="w-full h-1 bg-white"></div>
               <TbDrone color="white" size={50} />
               <div className="w-full h-1 bg-white"></div>
               <FaLaptopCode color="white" size={50} />
               <div className="w-full h-1 bg-white"></div>
-              <BsCpuFill color="white" size={50} />
+              <IoTelescope color="white" size={50} />
             </div>
             <div
               id="box-2"

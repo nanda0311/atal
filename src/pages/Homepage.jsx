@@ -7,31 +7,21 @@ import Partner from "../components/Homepage/Partner";
 import Landing from "../components/Homepage/Landing";
 import AboutNew from "../components/Homepage/AboutNew";
 import Focus from '../components/Homepage/Focus';
-import Stat1 from "../components/Homepage/Stat1";
+import EcoSystem from "../components/Homepage/Ecosystem";
 import Testimonials from "../components/Homepage/Testimonials";
 const Home = () => {
   return (
     <Container>
-      {/*<Header/>*/}
-      {/*
-      <Carousel />
-    */}
+
       <Landing />
+      <AboutNew /> 
       <Testimonials/>
-      {/*   about */}
-      {/*<About />*/}
-      <AboutNew />
       <Focus/>
-      <Stat1/>
-
-
-      {/* SocialMedia */}
+      <EcoSystem/>
       <SocialMedia />
-
-      {/* stats */}
       <Stats />
-
       <Partner />
+
     </Container>
   );
 };
