@@ -66,8 +66,9 @@ const NavbarOG = () => {
             <a href="/">
               {" "}
               <div className="flex ml-2">
-                <img className="w-10 mr-2" src={ptuLogo} alt="" />
-                <img className="w-10" src={Aic} alt="" />
+                <img className="h-14 mr-4" src={Aic} alt="" />
+                <img className="h-14 mr-4" src={ptuLogo} alt="" />
+                <img className="h-14" src={Aim} alt="" />
               </div>
             </a>
 
@@ -93,6 +94,13 @@ const NavbarOG = () => {
                 <NavLink to="/">Home</NavLink>
               </li>
               <hr />
+
+              <li>
+                <NavLink to="/startupDetail" onClick={hideAll}>
+                  Portfolio
+                </NavLink>
+              </li>
+              <hr/>
               <li>
                 <NavLink to="/programs" onClick={hideAll}>
                   Programs
