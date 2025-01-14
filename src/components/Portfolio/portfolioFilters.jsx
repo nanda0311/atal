@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FaFilter } from 'react-icons/fa';  // Import the filter icon
 
 const FilterContainer = styled.div`
   display: flex;
@@ -20,18 +21,28 @@ const FilterButton = styled.button`
   &:hover {
     background-color: ${props => props.active ? '#2563eb' : '#f3f4f6'};
   }
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
-const PortfolioFilters = ({ categories, activeCategory, onCategoryChange }) => {
+const PortfolioFilters = ({ categories, activeCategory, onCategoryChange, onAdvancedFilterClick }) => {
   return (
     <FilterContainer>
       {categories.map((category) => (
         <FilterButton
           key={category}
           active={activeCategory === category}
-          onClick={() => onCategoryChange(category)}
+          onClick={() => {
+            if (category === 'AdvancedFilterIcon') {
+              onAdvancedFilterClick();  // Trigger advanced filter modal
+            } else {
+              onCategoryChange(category);
+            }
+          }}
         >
-          {category}
+          {category === 'AdvancedFilterIcon' ? <FaFilter /> : category}  {/* Render icon for 'Advanced Filter' */}
         </FilterButton>
       ))}
     </FilterContainer>
