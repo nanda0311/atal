@@ -28,7 +28,7 @@ export const portfolioData = [
     image: raatai,
     founded: '2024',
     revenue: 'Pre-revenue stage',
-    sector: 'textile',
+    sector: 'Textile',
     jobs:'5',
     achievements: [
       'Secured funding of $1M',

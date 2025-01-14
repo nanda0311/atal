@@ -1,31 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Calendar, Users, Target, Award } from 'lucide-react';
+
+// Wrapper to center the content on the page
+const PageWrapper = styled.div`
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: 100vh; /* Takes up the full viewport height */
+  margin: 0; /* Removes default body margin */
+`;
 
 const Container = styled.div`
   padding: 1.5rem;
 `;
 
-
 const ImageContainer = styled.div`
-  position: relative;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 16rem;
-  width: 16rem; /* Make sure it's a square to form a perfect circle */
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  width: 100%;
+  max-width: 16rem; /* Optional: Limit the maximum width */
+  height: 16rem; /* Set a fixed height for consistent alignment */
   margin-bottom: 1.5rem;
-  border-radius: 50%; /* Circular shape */
-  overflow: hidden;
-  
 `;
 
 const Image = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensure the image covers the container */
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
 `;
-
 
 const CategoryBadge = styled.span`
   position: absolute;
@@ -143,16 +148,9 @@ const App = () => {
   const [selectedStartup, setSelectedStartup] = useState(startupData[0]);
 
   return (
-    <div>
-      <StartupList>
-        {startupData.map((startup) => (
-          <Card key={startup.id} onClick={() => setSelectedStartup(startup)}>
-            <h3>{startup.title}</h3>
-          </Card>
-        ))}
-      </StartupList>
+    <PageWrapper>
       <StartupDetails startup={selectedStartup} />
-    </div>
+    </PageWrapper>
   );
 };
 
