@@ -1,5 +1,5 @@
 import React from 'react';
-import AicTeam from '../components/Teams/AicTeam'; // Rename the imported component
+import AicTeam from '../components/Teams/AicTeam'; 
 
 const Team = () => {
   return (

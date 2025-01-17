@@ -4,37 +4,16 @@ import { Aic, Aim, ptuLogo } from "../assets/logos/logs";
 import { NavbarDemo } from "./Navbar";
 import { FaBars } from "react-icons/fa";
 import { IoCloseSharp } from "react-icons/io5";
-import { FaAngleDown } from "react-icons/fa";
-import { FaAngleRight } from "react-icons/fa";
 
 const NavbarOG = () => {
-  const [aimClickCount, setAimClickCount] = useState(0); // State for tracking Aim logo clicks
   const navigate = useNavigate();
 
   const goToHome = () => {
     navigate("/"); // Navigate to home page
   };
 
-  ///////////////
-
-  const [showLoginPopup, setShowLoginPopup] = useState(false); // State for popup visibility
-
-  const handleLogoClick = () => {
-    setAimClickCount((prevCount) => {
-      const newCount = prevCount + 1;
-      if (newCount === 3) {
-        setShowLoginPopup(true); // Show login popup on the third click
-        return 0; // Reset count
-      }
-      return newCount;
-    });
-  };
-
-  const closePopup = () => {
-    setShowLoginPopup(false); // Close the popup
-  };
-
   const [isOpen, setIsOpen] = useState(true);
+  const [showLoginPopup, setShowLoginPopup] = useState(false);
 
   const toggleMenue = () => {
     setIsOpen(!isOpen);
@@ -49,14 +28,19 @@ const NavbarOG = () => {
     setIsOpen(true);
   };
 
+  const toggleLoginPopup = () => {
+    setShowLoginPopup(!showLoginPopup);
+  };
+
   return (
     <div>
+      {/* Mobile Navbar */}
       <div className="relative py-6 gap-10 md:hidden sm:block">
         <div
           className={
             !isOpen
-              ? "fixed z-10 w-full top-0 h-screen  bg-slate-950 transition duration-1000  backdrop-blur-lg bg-opacity-40 "
-              : "fixed z-10 w-full top-0 hidden -left-[100%] h-screen bg-slate-950 transition duration-1000  backdrop-blur-lg bg-opacity-40 "
+              ? "fixed z-10 w-full top-0 h-screen bg-slate-950 transition duration-1000 backdrop-blur-lg bg-opacity-40"
+              : "fixed z-10 w-full top-0 hidden -left-[100%] h-screen bg-slate-950 transition duration-1000 backdrop-blur-lg bg-opacity-40"
           }
           onClick={toggleMenue}
         ></div>
@@ -64,7 +48,6 @@ const NavbarOG = () => {
         <div>
           <nav className="flex items-center justify-between">
             <a href="/">
-              {" "}
               <div className="flex ml-2">
                 <img className="h-14 mr-4" src={Aic} alt="" />
                 <img className="h-14 mr-4" src={ptuLogo} alt="" />
@@ -75,8 +58,8 @@ const NavbarOG = () => {
             <ul
               className={
                 isOpen
-                  ? " flex-col text-white absolute justify-evenly text-2xl top-4 space-y-60 opacity-0 transition-all  p-7 -left-full z-20  "
-                  : "flex-col text-white absolute justify-evenly text-2xl top-4 space-y-4  p-7 left-0 z-20 transition-all "
+                  ? "flex-col text-white absolute justify-evenly text-2xl top-4 space-y-60 opacity-0 transition-all p-7 -left-full z-20"
+                  : "flex-col text-white absolute justify-evenly text-2xl top-4 space-y-4 p-7 left-0 z-20 transition-all"
               }
             >
               <div
@@ -100,20 +83,20 @@ const NavbarOG = () => {
                   Portfolio
                 </NavLink>
               </li>
-              <hr/>
+              <hr />
               <li>
                 <NavLink to="/programs" onClick={hideAll}>
                   Programs
                 </NavLink>
               </li>
-              
+
               <hr />
-              <li >
+              <li>
                 <NavLink onClick={hideAll} to="/partners">
                   Partners
                 </NavLink>
               </li>
-              
+
               <hr />
               <li>
                 <NavLink onClick={hideAll} to="/events">
@@ -163,6 +146,7 @@ const NavbarOG = () => {
         </div>
       </div>
 
+      {/* Desktop Navbar */}
       <div className="relative py-6 justify-center gap-10 items-center hidden md:flex">
         <div className="flex gap-10 items-center border-b-4 rounded-3xl border-customBlue px-5 bg-white">
           <div className="w-24 h-24 cursor-pointer" onClick={goToHome}>
@@ -188,11 +172,62 @@ const NavbarOG = () => {
             <img
               src={Aim}
               alt="Aim Logo"
-              className=" max-w-36 max-h-full pt-2 object-contain"
+              className="max-w-36 max-h-full pt-2 object-contain"
             />
           </div>
         </div>
+        <div>
+          <button
+            className="ml-4 px-6 py-2 rounded-lg bg-[#12283c] text-white font-semibold hover:bg-opacity-90 transition"
+            onClick={toggleLoginPopup}
+          >
+            Login
+          </button>
+        </div>
       </div>
+
+      {/* Login Popup */}
+      {showLoginPopup && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-lg p-6 w-96">
+            <div className="flex justify-between items-center mb-4">
+              <h2 className="text-xl font-bold">Login</h2>
+              <button
+                className="text-gray-500 hover:text-black"
+                onClick={toggleLoginPopup}
+              >
+                <IoCloseSharp size={24} />
+              </button>
+            </div>
+            <form>
+              <div className="mb-4">
+                <label className="block text-gray-700 text-sm font-bold mb-2">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300"
+                />
+              </div>
+              <div className="mb-4">
+                <label className="block text-gray-700 text-sm font-bold mb-2">
+                  Password
+                </label>
+                <input
+                  type="password"
+                  className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring focus:ring-blue-300"
+                />
+              </div>
+              <button
+                type="submit"
+                className="w-full bg-[#12283c] text-white py-2 rounded-lg hover:bg-opacity-90 transition"
+              >
+                Login
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
