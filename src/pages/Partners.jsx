@@ -134,12 +134,14 @@ function App() {
           <button
             key={section.name}
             onClick={() => setActiveSection(section.path)}
-            className={`flex items-center gap-2 px-6 py-3 bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 border ${
-              activeSection === section.path ? 'border-blue-500' : 'border-gray-100'
+            className={`flex items-center gap-2 px-6 py-3 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 border ${
+              activeSection === section.path
+                ? 'bg-[#12283c] text-white border-[#0f1e2d]'
+                : 'bg-white text-gray-700 border-gray-100'
             }`}
           >
             {section.icon}
-            <span className="font-medium text-gray-700">{section.name}</span>
+            <span className="font-medium">{section.name}</span>
           </button>
         ))}
       </div>
