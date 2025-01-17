@@ -17,6 +17,10 @@ const Navbar_menu = [
         title: "Students Projects",
         link: "/studentProject",
       },
+      {
+        title:"Team",
+      link:"/team",
+      },
     ],
   },
   {
@@ -105,7 +109,7 @@ const Navbar_menu = [
   {
     Title: "Contact Us",
     link: "/contact",
-    drop: null,
+    dropList:null, 
   },
 ];
 

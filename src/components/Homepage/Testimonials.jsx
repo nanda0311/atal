@@ -12,7 +12,7 @@ const Testimonials = () => {
     },
     {
       role: 'COO',
-      name: 'Ms. Priya Sharma',
+      name: 'Mr. S Rajakumar',
       company: 'Atal Incubation Center, PECF',
       message:
         'The strategic guidance from AIC-PECF helped us navigate critical challenges in our business. The team’s hands-on approach ensured we had access to essential resources and connections that accelerated our growth.',
@@ -20,7 +20,7 @@ const Testimonials = () => {
     },
     {
       role: 'Director',
-      name: 'Dr. Ramesh Kumar',
+      name: 'Dr. R Sundaramurthy',
       company: 'Atal Incubation Center, PECF',
       message:
         'AIC-PECF provided us with a nurturing environment to innovate and grow. Their mentorship and resources have been invaluable in helping us reach new milestones in our journey.',

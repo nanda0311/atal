@@ -24,6 +24,7 @@ import IP from "./components/Partners/IPsupport.jsx";
 import Network from "./components/Partners/Network.jsx";
 import NavbarOG from "./layouts/NavbarOG.jsx";
 import Programs from "./pages/Programs.jsx";
+import Team from "./pages/Teams.jsx";
 
 
 function App() {
@@ -49,6 +50,8 @@ function App() {
         <Route path="/investmentPartner" element={<Investment />} />
         <Route path="/ipSupporters" element={<IP />} />
         <Route path="/networkingPartners" element={<Network />} />
+        <Route path="/team" element={<Team/>} />
+        
         <Route path="*" element={<div>404 - Page Not Found</div>} />
       </Routes>
       <Footer />

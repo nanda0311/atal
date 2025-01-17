@@ -17,20 +17,26 @@ const Container = styled.div`
 
 const ImageContainer = styled.div`
   display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
+  justify-content: center; /* Centers the image horizontally */
+  align-items: center; /* Centers the image vertically */
+  position: relative; /* Allows positioning of the badge */
   width: 100%;
-  max-width: 16rem; /* Optional: Limit the maximum width */
-  height: 16rem; /* Set a fixed height for consistent alignment */
+  max-width: 16rem; /* Limit the width */
+  height: 16rem; /* Fixed height for consistent alignment */
   margin-bottom: 1.5rem;
+  overflow: hidden; /* Ensures no overflow of the image */
 `;
 
 const Image = styled.img`
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  object-position: center;
+  width: 100%;
+  height: 100%; /* Fills the container height */
+  object-fit: contain; /* Ensures the image fits properly */
+  object-position: center; /* Centers the image within the container */
+  border-radius: 0; /* Ensures no circular shape */
+  
 `;
+
+
 
 const CategoryBadge = styled.span`
   position: absolute;
