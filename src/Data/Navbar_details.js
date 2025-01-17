@@ -78,29 +78,7 @@ const Navbar_menu = [
     link: "/events",
     dropList: null,
   },
-  {
-    Title: "Funding",
-    link: "/fundng",
-    drop: "active",
-    dropList: [
-      {
-        title: "SISFS",
-        link: "/sisfs",
-      },
-      {
-        title: "PROPLEX",
-        link: "/proplex",
-      },
-      {
-        title: "Aim Seed Investments",
-        link: "/aimseed",
-      },
-      {
-        title: "External Funding Support",
-        link: "/external",
-      },
-    ],
-  },
+ 
   {
     Title: "Tenders",
     link: "/tenders",

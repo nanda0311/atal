@@ -104,12 +104,7 @@ const NavbarOG = () => {
                 </NavLink>
               </li>
               <hr />
-              <li>
-                <NavLink onClick={hideAll} to="/fundng">
-                  Funding
-                </NavLink>
-              </li>
-              <hr />
+             
               <li>
                 <NavLink onClick={hideAll} to="/tenders">
                   Tenders
