@@ -1,7 +1,7 @@
 import React, { useState, Suspense } from 'react';
 import styled from 'styled-components';
 import { portfolioData } from './data/portfolioData';
-import PortfolioCard from './PortfolioCard';
+import PortfolioCard from './PortfolioCards';
 import Modal from './UI/Modal';
 import StartupDetails from './StartupDetail';
 import AdvancedFilterForm from './AdvancedFilterForm';
