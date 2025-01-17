@@ -1,14 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, Suspense } from 'react';
 import styled from 'styled-components';
 import { portfolioData } from './data/portfolioData';
-import PortfolioFilters from './PortfolioFilters';
 import PortfolioCard from './PortfolioCard';
 import Modal from './UI/Modal';
 import StartupDetails from './StartupDetail';
 import AdvancedFilterForm from './AdvancedFilterForm';
 
+// Dynamic import for PortfolioFilters to optimize bundle size
+const PortfolioFilters = React.lazy(() => import('./PortfolioFilters'));
+
+// Categories for filtering
 const categories = ['All', 'Ongoing', 'Graduated', 'AdvancedFilterIcon'];
 
+// Styled components
 const Section = styled.section`
   padding: 4rem 1rem;
   background: linear-gradient(180deg, #eef2f7 0%, #ffffff 100%);
@@ -71,6 +75,7 @@ const Button = styled.button`
   }
 `;
 
+// Items displayed per page
 const ITEMS_PER_PAGE = 15;
 
 const PortfolioSection = () => {
@@ -88,7 +93,7 @@ const PortfolioSection = () => {
     ? portfolioData
     : portfolioData.filter(item => item.category === activeCategory);
 
-  // Apply advanced filters (sector and founded year)
+  // Apply advanced filters
   const advancedFilteredData = filteredData.filter(item => {
     const matchesYear = !advancedFilters.founded ||
       parseInt(item.founded) === parseInt(advancedFilters.founded);
@@ -97,7 +102,7 @@ const PortfolioSection = () => {
     return matchesYear && matchesSector;
   });
 
-  // Slice the data to show the limited number of items
+  // Visible data with pagination
   const visibleData = advancedFilteredData.slice(0, visibleCount);
 
   const handleStartupClick = (startup) => {
@@ -109,19 +114,16 @@ const PortfolioSection = () => {
   };
 
   const handleAdvancedFilterConfirm = () => {
-    // Stay on 'All' but apply the advanced filter
     setIsAdvancedFilterOpen(false);
-    setActiveCategory('All'); // Ensure we're still showing 'All' items, filtered by advanced filter
+    setActiveCategory('All'); // Stay on 'All' category when applying advanced filters
     setVisibleCount(ITEMS_PER_PAGE); // Reset pagination
   };
 
   const handleCategoryChange = (category) => {
-    // If switching to Advanced Filter, open the modal
     if (category === 'AdvancedFilterIcon') {
-      setIsAdvancedFilterOpen(true);  // Open advanced filter modal
+      setIsAdvancedFilterOpen(true);
     } else {
-      // Reset advanced filters when selecting other categories
-      setAdvancedFilters({ founded: '', sector: '' });
+      setAdvancedFilters({ founded: '', sector: '' }); // Reset advanced filters
       setActiveCategory(category);
       setVisibleCount(ITEMS_PER_PAGE); // Reset visible items
     }
@@ -137,12 +139,14 @@ const PortfolioSection = () => {
           </Subtitle>
         </Header>
 
-        <PortfolioFilters
-          categories={categories}
-          activeCategory={activeCategory}
-          onCategoryChange={handleCategoryChange}
-          onAdvancedFilterClick={() => setIsAdvancedFilterOpen(true)}
-        />
+        <Suspense fallback={<div>Loading filters...</div>}>
+          <PortfolioFilters
+            categories={categories}
+            activeCategory={activeCategory}
+            onCategoryChange={handleCategoryChange}
+            onAdvancedFilterClick={() => setIsAdvancedFilterOpen(true)}
+          />
+        </Suspense>
 
         <Grid>
           {visibleData.map(item => (
