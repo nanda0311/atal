@@ -25,20 +25,17 @@ const ImageContainer = styled.div`
   justify-content: center;
   background-color: #fff;
   margin: 1rem auto;
-  padding: 1rem; /* Add padding for spacing around the image */
-  border-radius: 50%; /* Keeps the logo circular, if needed */
-  width: auto;
-  height: auto;
-  max-width: 240px; /* Increase the max width */
-  max-height: 240px; /* Increase the max height */
+  padding: 1rem;
+  border-radius: 50%;
+  max-width: 240px;
+  max-height: 240px;
 `;
 
 const Image = styled.img`
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain; /* Maintains aspect ratio without cutting off the logo */
+  object-fit: contain;
 `;
-
 
 const CategoryBadge = styled.span`
   position: absolute;
@@ -49,7 +46,6 @@ const CategoryBadge = styled.span`
   color: white;
   font-size: 0.875rem;
   border-radius: 9999px;
-  z-index: 2;
 `;
 
 const Content = styled.div`
@@ -61,21 +57,18 @@ const Title = styled.h3`
   font-size: 1.25rem;
   font-weight: 600;
   color: #1f2937;
-  margin-bottom: 0.5rem;
 `;
 
-const PortfolioCard = ({ title, image, category, onClick }) => {
-  return (
-    <Card onClick={onClick}>
-      <CategoryBadge>{category}</CategoryBadge>
-      <ImageContainer>
-        <Image src={image} alt={title} />
-      </ImageContainer>
-      <Content>
-        <Title>{title}</Title>
-      </Content>
-    </Card>
-  );
-};
+const PortfolioCard = ({ title, image, category, onClick }) => (
+  <Card onClick={onClick}>
+    <CategoryBadge>{category}</CategoryBadge>
+    <ImageContainer>
+      <Image src={image} alt={title} />
+    </ImageContainer>
+    <Content>
+      <Title>{title}</Title>
+    </Content>
+  </Card>
+);
 
 export default PortfolioCard;
