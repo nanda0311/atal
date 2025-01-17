@@ -7,7 +7,7 @@ import StartupDetails from './StartupDetail';
 import AdvancedFilterForm from './AdvancedFilterForm';
 
 // Lazy loading PortfolioFilters
-const PortfolioFilters = React.lazy(() => import('./PortfolioFilters'));
+const PortfolioFilters = React.lazy(() => import('./PortfolioFilter'));
 
 const Section = styled.section`
   padding: 4rem 1rem;
