@@ -3,9 +3,17 @@ import styled from 'styled-components';
 import { useInView } from 'react-intersection-observer';
 import CountUp from 'react-countup';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRocket, faGraduationCap, faUsers, faDollarSign, faHandshake } from '@fortawesome/free-solid-svg-icons';
+import { faRocket, faGraduationCap, faUsers,faUser, faDollarSign, faHandshake } from '@fortawesome/free-solid-svg-icons';
 
 const stats = [
+    { number: 2500, description: "Registered Members", icon: faUser },
+    { number: 75, description: "Start-ups Supported", icon: faRocket },
+    { number: 35, description: "Mentors On-board", icon: faRocket },
+    { number: 25, description: "Industrial Partnership", icon: faRocket },
+    { number: 15, description: "Academic Partnership", icon: faRocket },
+    { number: 15, description: "Industry Consulting Projects", icon: faRocket },
+    { number: 8, description: "MSMEs Supported", icon: faRocket },
+    { number: 1375, description: "Outreach Initiatives Events", icon: faRocket },
     { number: 67, description: "No. of Startups", icon: faRocket },
     { number: 12, description: "Startups Graduated", icon: faGraduationCap },
     { number: 250, description: "Employment Generated", icon: faUsers },

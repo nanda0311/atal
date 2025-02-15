@@ -22,7 +22,6 @@ const Home = () => {
       <Partner />
       <EcoSystem/>
       <Stats />
-
       <SocialMedia />
     </Container>
   );

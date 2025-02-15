@@ -77,7 +77,7 @@ function stat1() {
   ];
 
   return (
-    <div className="max-w-[1200px] mx-auto my-12 p-5">
+    <div className="max-w-full bg-gray-100 mx-auto mt-12 p-5">
       <h1 className="inline-block bg-[#12283c] text-white px-5 py-2.5 rounded-full font-bold mb-10">
         ECOSYSTEM IMPACT
       </h1>
