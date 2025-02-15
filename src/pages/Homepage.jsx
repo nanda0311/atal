@@ -9,6 +9,7 @@ import AboutNew from "../components/Homepage/AboutNew";
 import Focus from '../components/Homepage/Focus';
 import EcoSystem from "../components/Homepage/Ecosystem";
 import Testimonials from "../components/Homepage/Testimonials";
+import Choose_Us from "../components/Homepage/Choose_Us";
 const Home = () => {
   return (
     <Container>
@@ -17,11 +18,12 @@ const Home = () => {
       <AboutNew /> 
       <Testimonials/>
       <Focus/>
-      <EcoSystem/>
-      <SocialMedia />
-      <Stats />
+      <Choose_Us/>
       <Partner />
+      <EcoSystem/>
+      <Stats />
 
+      <SocialMedia />
     </Container>
   );
 };

@@ -70,7 +70,7 @@ const Focus = () => {
             className="group relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105 flex-shrink-0"
             style={{ width: '' }}
           >
-            <div className="relative h-64 overflow-hidden">
+            <div className="relative overflow-hidden">
               <img
                 src={area.image}
                 alt={area.title}
@@ -150,7 +150,9 @@ const Focus = () => {
             </div>
             
             <div className="p-8">
+              <div className=' flex justify-center items-center'>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">{area.title}</h2>
+              </div>
               
               {/* Hover overlay with details */}
               <div className="absolute inset-0 bg-black/95 opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center">
@@ -178,7 +180,7 @@ const Focus = () => {
                     onClick={() => handleApply(area.title)}
                     className="w-full py-3 px-6 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg shadow-lg transition-colors duration-300 flex items-center justify-center space-x-2"
                   >
-                    <span>Apply Now</span>
+                    <span>Explore Now</span>
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
                     </svg>

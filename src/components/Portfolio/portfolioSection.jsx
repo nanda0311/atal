@@ -78,6 +78,8 @@ const PortfolioSection = () => {
 
   const handleKnowMore = () => setVisibleCount(prev => prev + ITEMS_PER_PAGE);
 
+  console.log(portfolioData.length)
+
   return (
     <Section>
       <Container>

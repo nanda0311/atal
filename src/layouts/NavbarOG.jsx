@@ -147,7 +147,7 @@ const NavbarOG = () => {
           <div className="w-24 h-24 cursor-pointer" onClick={goToHome}>
             <img
               src={Aic}
-              className="w-full h-full object-contain"
+              className="w-full h-full object-cover"
               alt="AIC Logo"
             />
           </div>
@@ -167,7 +167,7 @@ const NavbarOG = () => {
             <img
               src={Aim}
               alt="Aim Logo"
-              className="max-w-36 max-h-full pt-2 object-contain"
+              className="max-w-36 max-h-full pt-2 object-cover"
             />
           </div>
         </div>

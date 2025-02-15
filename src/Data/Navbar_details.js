@@ -5,7 +5,7 @@ const Navbar_menu = [
     drop: null,
   },
   {
-    Title: `EcoSystem`,
+    Title: `Ecosystem`,
     link: "/",
     drop: "active",
     dropList: [

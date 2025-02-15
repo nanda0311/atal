@@ -64,7 +64,7 @@ const WhoAmI = () => {
   return (
     <div>
      {/* Who Am I Section */}
-      <div className="bg-gray-100 py-10 px-10 mt-4 md:mt-40 md:pt-24">
+      <div className="bg-gray-100 py-10 px-10 mt-4 md:mt-10 md:py-16">
         <div className="flex flex-wrap items-center justify-center gap-8">
           {/* Who Am I? Dropdown */}
           <div className="relative">
@@ -96,7 +96,7 @@ const WhoAmI = () => {
                 onFocus={handleFocusDropdown} // Open dropdown when focused
                 onBlur={handleBlurDropdown} // Close dropdown with delay
               />
-              {dropdownOpen && (
+              {/* {dropdownOpen && (
                 <ul className="absolute mt-1 border border-gray-300 rounded-md bg-white p-4 shadow-md max-h-60 overflow-auto w-full">
                   {filteredActions?.map((action, index) => (
                     <li
@@ -108,7 +108,7 @@ const WhoAmI = () => {
                     </li>
                   ))}
                 </ul>
-              )}
+              )} */}
             </div>
           </div>
 

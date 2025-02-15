@@ -5,7 +5,8 @@ const Testimonials = () => {
     {
       role: 'CEO',
       name: 'Mr. Vishnu Vardhan',
-      company: 'Atal Incubation Center, PECF',
+      occupation: 'Chief Executive Officer',
+      company: 'Atal Incubation Centre, PEC Foundation',
       message:
         'AIC-PECF has been instrumental in our startup journey. The support we have received, including expert mentorship, crucial resources, and valuable networking opportunities, has been vital for our product development. Their dedication continues to play a key role as we advance in our development process.',
       photo: '/images/ceo.jpg', // Replace with actual image URLs
@@ -13,7 +14,8 @@ const Testimonials = () => {
     {
       role: 'COO',
       name: 'Mr. S Rajakumar',
-      company: 'Atal Incubation Center, PECF',
+      occupation: 'Chief Operating Officer',
+      company: 'Atal Incubation Centre, PEC Foundation',
       message:
         'The strategic guidance from AIC-PECF helped us navigate critical challenges in our business. The team’s hands-on approach ensured we had access to essential resources and connections that accelerated our growth.',
       photo: '/images/coo.jpg',
@@ -21,7 +23,8 @@ const Testimonials = () => {
     {
       role: 'Director',
       name: 'Dr. R Sundaramurthy',
-      company: 'Atal Incubation Center, PECF',
+      occupation: 'Executive Director',
+      company: 'Atal Incubation Centre, PEC Foundation',
       message:
         'AIC-PECF provided us with a nurturing environment to innovate and grow. Their mentorship and resources have been invaluable in helping us reach new milestones in our journey.',
       photo: '/images/director.jpg',
@@ -73,8 +76,11 @@ const Testimonials = () => {
           <div className="flex-col flex justify-between bg-slate-100 p-10 rounded-md w-full md:w-[50vw] relative">
             <p className="md:text-xl text-base text-justify">{testimonials[currentSlide].message}</p>
             <div className="gap-5 text-center font-medium text-sm md:text-lg mt-4">
-              <h4>{testimonials[currentSlide].name}</h4>
-              <h4>{testimonials[currentSlide].company}</h4>
+              <h4 className=' text-lg'>{testimonials[currentSlide].name}</h4>
+              <div className=' flex gap-2 justify-center'>
+              <h4 className=' text-sm'>{testimonials[currentSlide].occupation + `,`}</h4>
+              <h4 className=' text-sm'>{testimonials[currentSlide].company}</h4>
+              </div>
             </div>
             {/* Decorative Arrow */}
             <div className="min-w-7 min-h-7 hidden md:block bg-slate-100 absolute top-[50%] -left-3 rotate-45"></div>

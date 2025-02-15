@@ -112,13 +112,13 @@ const About = () => {
               </VisionMissionContent>
           </VisionMission>
           <Activities>
-              <ActivitiesContent>
+              {/* <ActivitiesContent>
               <p class="text-2xl font-bold text-center">Activities of PECF</p>
                   <p class=" text-lg mt-1">
                       Entrepreneurship and innovation are critical for the growth of any economy, in an increasingly competitive world. They become even more critical for India as its demographic dividend can only be realized with rapid creation of employment and income generation opportunities. Global experience shows that, apart from creating wealth and boosting the economy, new businesses also create disproportionately more jobs than established ones. AIC-PECF actively creates an environment for the young innovators to test their business ideas with minimal risks.
                   </p>
-              </ActivitiesContent>
-              <CarouselSection>
+              </ActivitiesContent> */}
+              {/* <CarouselSection>
                   <Slider {...settings}>
                       <Slide>
                           <img src={slide1} alt="Slide 1" />
@@ -142,7 +142,7 @@ const About = () => {
                           <img src={slide7} alt="Slide 7" />
                       </Slide>
                   </Slider>
-              </CarouselSection>
+              </CarouselSection> */}
           </Activities>
           <p class="text-2xl font-bold text-center">Infrastructure</p>
           <Infrastructure onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
